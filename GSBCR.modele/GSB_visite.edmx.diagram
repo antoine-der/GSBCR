@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="19c891869abd42ca860382e00700ea63" Name="Diagram1">
+        <EntityTypeShape EntityType="GSBCR.modele.FAMILLE" Width="1.5" PointX="9.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.MEDICAMENT" Width="1.5" PointX="9.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.MOTIF_VISITE" Width="1.5" PointX="1.5" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.OFFRIR" Width="1.5" PointX="9.125" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.POSSEDER" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.PRATICIEN" Width="1.5" PointX="5.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.RAPPORT_VISITE" Width="1.5" PointX="1.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.REGION" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.SECTEUR" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.SPECIALITE" Width="1.5" PointX="8.375" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.TRAVAILLER" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.TYPE_PRATICIEN" Width="1.5" PointX="2.875" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.VISITEUR" Width="1.5" PointX="3.875" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSBCR.modele.VAFFECTATION" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="GSBCR.modele.MEDICAMENT_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.OFFRIR_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.RAPPORT_VISITE_FK02" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.RAPPORT_VISITE_FK03" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.RAPPORT_VISITE_FK04" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.OFFRIR_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.POSSEDER_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.POSSEDER_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.PRATICIEN_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.RAPPORT_VISITE_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.RAPPORT_VISITE_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.REGION_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.TRAVAILLER_FK00" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.VISITEUR_FK01" ManuallyRouted="false" />
+        <AssociationConnector Association="GSBCR.modele.TRAVAILLER_FK01" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
