@@ -111,9 +111,15 @@ namespace GSBCR.BLL
             //A faire : charger les rapports terminés et non lus (état = 2 ) des visiteurs d'une région
             List<RAPPORT_VISITE> lr;
             List<string> lm = new List<string>();
-            lm.Add(code);
+            
             List<int> le = new List<int>();
             le.Add(2);
+            List<VAFFECTATION> lvaff = VaffectationDAO.FindByRegion(code);
+            foreach (VAFFECTATION vaff in lvaff)
+            {
+               // vis = VisiteurDAO.FindById(vaff.VIS_MATRICULE);
+                lm.Add(vaff.VIS_MATRICULE);
+            }
             lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
             return lr;
 
@@ -122,15 +128,21 @@ namespace GSBCR.BLL
         /// </summary>
         /// <param name="r">code région</param>
         /// <returns>List<RAPPORT_VISITE>/returns>
-        public static List<RAPPORT_VISITE> ChargerRapportRegionLus(String m)
+        public static List<RAPPORT_VISITE> ChargerRapportRegionLus(String code)
         {
             //A faire : charger les rapports terminés (état = 3) des visiteurs d'une région
 
             List<RAPPORT_VISITE> lr;
             List<string> lm = new List<string>();
-            lm.Add(m);
+
             List<int> le = new List<int>();
             le.Add(3);
+            List<VAFFECTATION> lvaff = VaffectationDAO.FindByRegion(code);
+            foreach (VAFFECTATION vaff in lvaff)
+            {
+                // vis = VisiteurDAO.FindById(vaff.VIS_MATRICULE);
+                lm.Add(vaff.VIS_MATRICULE);
+            }
             lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
             return lr;
         }
@@ -174,8 +186,8 @@ namespace GSBCR.BLL
         /// </summary>
         public static List<MOTIF_VISITE> ChargerMotifVisites()
         {
-            /*List<MOTIF_VISITE> mv = MOTIF_VISITE.FindAll();
-            */return null;
+            List<MOTIF_VISITE> mv = MotifVisiteDAO.FindAll();
+            return mv;
         }
         /// <summary>
         /// Permet de charger tous les praticiens
