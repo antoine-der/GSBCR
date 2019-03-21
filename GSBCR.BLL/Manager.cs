@@ -67,7 +67,23 @@ namespace GSBCR.BLL
         public static List<RAPPORT_VISITE> ChargerRapportVisiteurFinis(String m)
         {
             //A faire : charger les rapports terminés (état = 2 ou 3) du visiteur
-            return null;
+            List<RAPPORT_VISITE> lr;
+            List<string> lm = new List<string>();
+            lm.Add(m);
+            List<int> le = new List<int>();
+            foreach (var etat in le)
+            {
+                if (etat == 2)
+                {
+                    le.Add(2);
+                }
+                else if (etat == 3)
+                {
+                    le.Add(3);
+                }
+            }            
+            lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
+            return lr;
         }
         /// <summary>
         /// Permet de retourner une liste de visiteurs pour un région à partir de vaffectation
@@ -158,7 +174,8 @@ namespace GSBCR.BLL
         /// </summary>
         public static List<MOTIF_VISITE> ChargerMotifVisites()
         {
-            return null;
+            /*List<MOTIF_VISITE> mv = MOTIF_VISITE.FindAll();
+            */return null;
         }
         /// <summary>
         /// Permet de charger tous les praticiens
