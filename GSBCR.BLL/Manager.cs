@@ -93,8 +93,14 @@ namespace GSBCR.BLL
     public static List<RAPPORT_VISITE> ChargerRapportRegionNonLus(String code)
         {
             //A faire : charger les rapports terminés et non lus (état = 2 ) des visiteurs d'une région
+            List<RAPPORT_VISITE> lr;
+            List<string> lm = new List<string>();
+            lm.Add(code);
+            List<int> le = new List<int>();
+            le.Add(2);
+            lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
+            return lr;
 
-            return null;
         }
         /// Permet de charger les rapports terminés et consultés (état 3) des visiteurs d'une région 
         /// </summary>
