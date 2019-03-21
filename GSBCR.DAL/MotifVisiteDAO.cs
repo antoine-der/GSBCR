@@ -12,16 +12,31 @@ namespace GSBCR.DAL
 {
     public static class MotifVisiteDAO
     {
-        public static MOTIF_VISITE FindById(string code)
+        public static MOTIF_VISITE FindById(string nom)
         {
             //A faire : rechercher un motif visite par son nom
-            return null;
+            MOTIF_VISITE motif = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                var req = from m in context.MOTIF_VISITE.Include("LesRapports")
+                          where m.MOT_LIBEL == nom
+                          select m;
+                motif = req.SingleOrDefault<MOTIF_VISITE>();
+            }
+            return motif;
         }
 
         public static List<MOTIF_VISITE> FindAll()
         {
             //A faire : charger tous les motifs visite
-            return null;
+            List<MOTIF_VISITE> motif = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                var req = from m in context.MOTIF_VISITE.Include("LesRapports")
+                          select m;
+                motif = req.ToList<MOTIF_VISITE>();
+            }
+            return motif;
         }
     }
 }

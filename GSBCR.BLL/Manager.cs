@@ -106,11 +106,17 @@ namespace GSBCR.BLL
         /// </summary>
         /// <param name="r">code région</param>
         /// <returns>List<RAPPORT_VISITE>/returns>
-        public static List<RAPPORT_VISITE> ChargerRapportRegionLus(String r)
+        public static List<RAPPORT_VISITE> ChargerRapportRegionLus(String m)
         {
             //A faire : charger les rapports terminés (état = 3) des visiteurs d'une région
 
-            return null;
+            List<RAPPORT_VISITE> lr;
+            List<string> lm = new List<string>();
+            lm.Add(m);
+            List<int> le = new List<int>();
+            le.Add(3);
+            lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
+            return lr;
         }
         /// <summary>
         /// Permet de créer un rapport dans la base de données 
