@@ -58,6 +58,12 @@
     <Reference Include="EntityFramework">
       <HintPath>..\..\GSBCR\GSBCR\GSBCR.modele\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="GSBCR.BLL">
+      <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\GSBCR.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="GSBCR.modele">
+      <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\GSBCR.modele.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +76,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmConsulterMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsulterMedicament.Designer.cs">
+      <DependentUpon>FrmConsulterMedicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsulterPraticien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsulterPraticien.Designer.cs">
+      <DependentUpon>FrmConsulterPraticien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetailRapportVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailRapportVisite.Designer.cs">
+      <DependentUpon>FrmDetailRapportVisite.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +126,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmConsulterMedicament.resx">
+      <DependentUpon>FrmConsulterMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsulterPraticien.resx">
+      <DependentUpon>FrmConsulterPraticien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailRapportVisite.resx">
+      <DependentUpon>FrmDetailRapportVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +220,12 @@
     </ProjectReference>
     <ProjectReference Include="..\GSBCR.UC\GSBCR.UC.csproj">
       <Project>{cb3c2c50-ddd5-4dab-9302-b6c84b8df771}</Project>
+      <Name>GSBCR.UC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GSBCR.UC\GSBCR.UC.csproj">
+      <Project>{CB3C2C50-DDD5-4DAB-9302-B6C84B8DF771}</Project>
       <Name>GSBCR.UC</Name>
     </ProjectReference>
   </ItemGroup>
