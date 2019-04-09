@@ -71,17 +71,9 @@ namespace GSBCR.BLL
             List<string> lm = new List<string>();
             lm.Add(m);
             List<int> le = new List<int>();
-            foreach (var etat in le)
-            {
-                if (etat == 2)
-                {
-                    le.Add(2);
-                }
-                else if (etat == 3)
-                {
-                    le.Add(3);
-                }
-            }            
+            le.Add(2);
+            le.Add(3);
+          
             lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
             return lr;
         }
