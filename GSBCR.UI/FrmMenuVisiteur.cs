@@ -64,7 +64,7 @@ namespace GSBCR.UI
             
         }
 
-        private void btnmModifierRapport_Click(object sender, EventArgs e)
+        private void btnmModifierRapport_Click_1(object sender, EventArgs e)
         {
             RAPPORT_VISITE r = new RAPPORT_VISITE();
             r.RAP_MATRICULE = leVisiteur.VIS_MATRICULE;

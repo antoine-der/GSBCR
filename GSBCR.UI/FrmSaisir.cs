@@ -175,7 +175,7 @@ namespace GSBCR.UI
                     Manager.MajRapport(r);
                     
                 }
-
+                
                 MessageBox.Show("Rapport de visite n° " + r.RAP_NUM + " enregistré", "Mise à Jour des données", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.Close();
@@ -303,9 +303,14 @@ namespace GSBCR.UI
         {
             if (chbDefinitif.Checked == true)
             {
-                if (txtNumPraticien == null || dtDateVisite == null || txtCodeMotif == null || txtBilan == null || nupCoef == null) {
-                MessageBox.Show("Un ou plusieurs champs obligatoire n'ont pas été saisies : code praticien, date visite, motif visite, bilan, niveau confiance");
-            }
+                if (txtNumPraticien.Text == "" || dtDateVisite.Text == "" || txtCodeMotif.Text == "" || txtBilan.Text == "" || nupCoef.Text == "")
+                {
+                    MessageBox.Show("Un ou plusieurs champs obligatoire n'ont pas été saisies : code praticien, date visite, motif visite, bilan, niveau confiance");
+                }
+                if (txtCodeMotif.Text != "AU")
+                {
+                    MessageBox.Show("Veuillez saisir le motif 'Autre'");
+                }
             }
             
         }

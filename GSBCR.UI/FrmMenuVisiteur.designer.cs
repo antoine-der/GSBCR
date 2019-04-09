@@ -34,7 +34,6 @@
             this.btnRapportValidés = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnQuitter = new System.Windows.Forms.Button();
             this.btnmModifierRapport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -96,6 +95,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "label3";
             // 
+            // btnmModifierRapport
+            // 
+            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 248);
+            this.btnmModifierRapport.Name = "btnmModifierRapport";
+            this.btnmModifierRapport.Size = new System.Drawing.Size(200, 23);
+            this.btnmModifierRapport.TabIndex = 0;
+            this.btnmModifierRapport.Text = "Modifier rapport de visite";
+            this.btnmModifierRapport.Click += new System.EventHandler(this.btnmModifierRapport_Click_1);
+            // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,7 +132,6 @@
         private System.Windows.Forms.Button btnRapportValidés;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Button btnmModifierRapport;
     }
 }

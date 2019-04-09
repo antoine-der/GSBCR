@@ -158,6 +158,10 @@
       <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
       <Name>GSBCR.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GSBCR.UC\GSBCR.UC.csproj">
+      <Project>{cb3c2c50-ddd5-4dab-9302-b6c84b8df771}</Project>
+      <Name>GSBCR.UC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
