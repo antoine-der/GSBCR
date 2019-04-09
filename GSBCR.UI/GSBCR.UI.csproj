@@ -58,12 +58,6 @@
     <Reference Include="EntityFramework">
       <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="GSBCR.BLL">
-      <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\GSBCR.BLL.dll</HintPath>
-    </Reference>
-    <Reference Include="GSBCR.modele">
-      <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\GSBCR.modele.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -188,9 +182,13 @@
       <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
       <Name>GSBCR.BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GSBCR.DAL\GSBCR.DAL.csproj">
-      <Project>{065145a2-f3ec-4edc-b31f-758c137a92e8}</Project>
-      <Name>GSBCR.DAL</Name>
+    <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
+      <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
+      <Name>GSBCR.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.modele\GSBCR.modele.csproj">
+      <Project>{ed2c086a-02f1-431f-9ef1-f009a6cb0e1a}</Project>
+      <Name>GSBCR.modele</Name>
     </ProjectReference>
     <ProjectReference Include="..\GSBCR.modele\GSBCR.modele.csproj">
       <Project>{ed2c086a-02f1-431f-9ef1-f009a6cb0e1a}</Project>
