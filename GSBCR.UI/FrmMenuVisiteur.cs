@@ -74,5 +74,21 @@ namespace GSBCR.UI
             FrmRapportsValides frv = new FrmRapportsValides(v);
             frv.ShowDialog();
         }
+
+        private void btn_consulter_medicament_Click(object sender, EventArgs e)
+        {
+            VISITEUR v = new VISITEUR();
+            v.VIS_MATRICULE = leVisiteur.VIS_MATRICULE;
+            FrmConsulterMedicament fcm = new FrmConsulterMedicament(v);
+            fcm.ShowDialog();
+        }
+
+        private void btn_consult_praticien_Click(object sender, EventArgs e)
+        {
+            VISITEUR v = new VISITEUR();
+            v.VIS_MATRICULE = leVisiteur.VIS_MATRICULE;
+            FrmConsulterPraticien fcp = new FrmConsulterPraticien(v);
+            fcp.ShowDialog();
+        }
     }
 }

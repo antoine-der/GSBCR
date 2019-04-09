@@ -116,6 +116,7 @@
             this.btn_consult_praticien.TabIndex = 8;
             this.btn_consult_praticien.Text = "Consulter Praticien";
             this.btn_consult_praticien.UseVisualStyleBackColor = true;
+            this.btn_consult_praticien.Click += new System.EventHandler(this.btn_consult_praticien_Click);
             // 
             // btn_consulter_medicament
             // 
@@ -125,6 +126,7 @@
             this.btn_consulter_medicament.TabIndex = 9;
             this.btn_consulter_medicament.Text = "Consulter médicament";
             this.btn_consulter_medicament.UseVisualStyleBackColor = true;
+            this.btn_consulter_medicament.Click += new System.EventHandler(this.btn_consulter_medicament_Click);
             // 
             // FrmMenuVisiteur
             // 
