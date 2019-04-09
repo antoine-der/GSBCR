@@ -57,15 +57,7 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR2017_eleves\GSBCR.BLL\bin\Debug\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="GSBCR.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR2017_eleves\GSBCR.BLL\bin\Debug\GSBCR.BLL.dll</HintPath>
-    </Reference>
-    <Reference Include="GSBCR.modele, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR2017_eleves\GSBCR.BLL\bin\Debug\GSBCR.modele.dll</HintPath>
+      <HintPath>..\GSBCR.modele\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,6 +77,12 @@
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRapportsValides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRapportsValides.Designer.cs">
+      <DependentUpon>FrmRapportsValides.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSaisir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRapportsValides.resx">
+      <DependentUpon>FrmRapportsValides.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSaisir.resx">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
@@ -112,7 +113,22 @@
     <None Include="app.config" />
     <None Include="Properties\DataSources\GSBCR.BLL.Manager.datasource" />
     <None Include="Properties\DataSources\GSBCR.DC.RapportVisite.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.FAMILLE.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.GSB_VisiteEntities.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.MEDICAMENT.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.MOTIF_VISITE.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.OFFRIR.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.POSSEDER.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.PRATICIEN.datasource" />
     <None Include="Properties\DataSources\GSBCR.modele.RAPPORT_VISITE.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.REGION.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.SECTEUR.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.SPECIALITE.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.sysdiagram.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.TRAVAILLER.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.TYPE_PRATICIEN.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.VAFFECTATION.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.VISITEUR.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -134,6 +150,24 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
+      <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
+      <Name>GSBCR.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.DAL\GSBCR.DAL.csproj">
+      <Project>{065145a2-f3ec-4edc-b31f-758c137a92e8}</Project>
+      <Name>GSBCR.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.modele\GSBCR.modele.csproj">
+      <Project>{ed2c086a-02f1-431f-9ef1-f009a6cb0e1a}</Project>
+      <Name>GSBCR.modele</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.UC\GSBCR.UC.csproj">
+      <Project>{cb3c2c50-ddd5-4dab-9302-b6c84b8df771}</Project>
+      <Name>GSBCR.UC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
