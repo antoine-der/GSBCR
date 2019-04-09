@@ -15,9 +15,9 @@ namespace GSBCR.UI
     public partial class FrmConsulterPraticien : Form
     {
         private string idVisiteur;
-        public FrmConsulterPraticien(string idV)
+        public FrmConsulterPraticien(VISITEUR idV)
         {
-            this.idVisiteur = idV;
+            this.idVisiteur = idV.VIS_MATRICULE;
             InitializeComponent();
             List<PRATICIEN> lpra = Manager.ChargerPraticiens();
             bsPra1.DataSource = lpra;

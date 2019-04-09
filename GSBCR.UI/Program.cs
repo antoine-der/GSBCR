@@ -21,6 +21,7 @@ namespace GSBCR.UI
             //Application.Run(new FrmDetailRapportVisite("a131", 3));
             //Application.Run(new FrmConsulterMedicament("a131"));           
             Application.Run(new FrmMenuVisiteur());
+            Application.Run(new FrmConnexion());
         }
     }
 }

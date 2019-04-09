@@ -15,9 +15,9 @@ namespace GSBCR.UI
     public partial class FrmConsulterMedicament : Form
     {
         private string idVisiteur;
-        public FrmConsulterMedicament(string idV)
+        public FrmConsulterMedicament(VISITEUR idV)
         {
-            this.idVisiteur = idV;
+            this.idVisiteur = idV.VIS_MATRICULE;
             InitializeComponent();
             List<MEDICAMENT> lmed = Manager.ChargerMedicaments();
             bsMed1.DataSource = lmed;
