@@ -89,6 +89,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "label3";
             // 
+            // btnmModifierRapport
+            // 
+            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 248);
+            this.btnmModifierRapport.Name = "btnmModifierRapport";
+            this.btnmModifierRapport.Size = new System.Drawing.Size(200, 23);
+            this.btnmModifierRapport.TabIndex = 0;
+            this.btnmModifierRapport.Text = "Modifier rapport visite";
+            this.btnmModifierRapport.Click += new System.EventHandler(this.btnmModifierRapport_Click);
+            // 
             // btnQuitter
             // 
             this.btnQuitter.Location = new System.Drawing.Point(154, 333);
