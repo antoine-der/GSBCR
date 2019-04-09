@@ -189,6 +189,11 @@ namespace GSBCR.BLL
             List<MOTIF_VISITE> mv = MotifVisiteDAO.FindAll();
             return mv;
         }
+        public static MOTIF_VISITE ChargerLeMotif(String code)
+        {
+            MOTIF_VISITE mv = MotifVisiteDAO.FindById(code);
+            return mv;
+        }
         /// <summary>
         /// Permet de charger tous les praticiens
         /// </summary>

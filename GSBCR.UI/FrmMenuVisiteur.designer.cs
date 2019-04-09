@@ -33,6 +33,7 @@
             this.btnNouveau = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnQuitter = new System.Windows.Forms.Button();
+            this.btnmModifierRapport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -83,11 +84,22 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
+            // btnmModifierRapport
+            // 
+            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 208);
+            this.btnmModifierRapport.Name = "btnmModifierRapport";
+            this.btnmModifierRapport.Size = new System.Drawing.Size(200, 23);
+            this.btnmModifierRapport.TabIndex = 7;
+            this.btnmModifierRapport.Text = "Modifer un rapport en cours";
+            this.btnmModifierRapport.UseVisualStyleBackColor = true;
+            this.btnmModifierRapport.Click += new System.EventHandler(this.btnmModifierRapport_Click);
+            // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 411);
+            this.Controls.Add(this.btnmModifierRapport);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnNouveau);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button btnNouveau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.Button btnmModifierRapport;
     }
 }
