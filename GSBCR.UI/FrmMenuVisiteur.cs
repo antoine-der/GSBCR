@@ -55,6 +55,15 @@ namespace GSBCR.UI
             Application.Exit();
         }
 
+        private void btnRapportValidés_Click(object sender, EventArgs e)
+        {
+            VISITEUR v = new VISITEUR();
+            v.VIS_MATRICULE = leVisiteur.VIS_MATRICULE;
+            FrmRapportsValides rv = new FrmRapportsValides(v);
+            rv.ShowDialog();
+            
+        }
+
         private void btnmModifierRapport_Click(object sender, EventArgs e)
         {
             RAPPORT_VISITE r = new RAPPORT_VISITE();
