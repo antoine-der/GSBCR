@@ -48,5 +48,10 @@ namespace GSBCR.UC
             coeffBox.Text = Convert.ToString(lePraticien.PRA_COEFNOTORIETE);
             codeBox.Text = lePraticien.TYP_CODE;
         }
+
+        private void UcPraticien_Load(object sender, EventArgs e)
+        {
+                      
+        }
     }
 }
