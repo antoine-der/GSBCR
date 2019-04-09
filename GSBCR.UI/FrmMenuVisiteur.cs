@@ -43,6 +43,7 @@ namespace GSBCR.UI
             if (leProfil.TRA_ROLE == "Visiteur" || leProfil.TRA_ROLE == "Délégué")
             {
                 btnNouveau.Visible = true;
+                btnRapportValidés.Visible = true;
             }
         }
 
@@ -64,6 +65,14 @@ namespace GSBCR.UI
         {
             FrmModifierMDP fmdp = new FrmModifierMDP();
             fmdp.ShowDialog();
+        }
+
+        private void btnRapportValidés_Click(object sender, EventArgs e)
+        {
+            VISITEUR v = new VISITEUR();
+            v.VIS_MATRICULE = leVisiteur.VIS_MATRICULE;
+            FrmRapportsValides frv = new FrmRapportsValides(v);
+            frv.ShowDialog();
         }
     }
 }
