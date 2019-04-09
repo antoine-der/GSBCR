@@ -35,6 +35,46 @@ namespace GSBCR.DAL
 
         }
         /// <summary>
+        /// Permet de retourner une liste avec tous les rapports qui ont un medicament
+        /// </summary>
+        /// <param name="n">Dépôt légal médicament</param>
+        /// <param name="m">Matricule du visiteur</param>
+        /// <returns>List<RAPPORT_VISITE></returns>
+        public static List<RAPPORT_VISITE> FindByMedDepLegalAndId(string m, string n)
+        {
+            List<RAPPORT_VISITE> lesRapports = null;
+            // écrire et exécuter la requête Linq
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                string reqStr = "select * from RAPPORT_VISITE r where (r.RAP_MED1 =" + "'" + n + "' or r.RAP_MED2 =" + "'" + n + "') and r.RAP_MATRICULE =" + "'" + m + "'";
+                lesRapports = context.RAPPORT_VISITE.SqlQuery(reqStr).ToList<RAPPORT_VISITE>();
+
+            }
+            return lesRapports;
+        }
+        /// <summary>
+        /// Permet de retourner une liste avec tous les rapports qui ont un medicament
+        /// </summary>
+        /// <param name="p">Numéro du praticien</param>
+        /// <param name="m">Matricule du visiteur</param>
+        /// <returns>List<RAPPORT_VISITE></returns>
+        public static List<RAPPORT_VISITE> FindByMedPratAndId(string m, string p)
+        {
+            List<RAPPORT_VISITE> lesRapports = null;
+            // écrire et exécuter la requête Linq
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                string reqStr = "select * from RAPPORT_VISITE r where r.RAP_PRANUM =" + "'" + p + "' and r.RAP_MATRICULE =" + "'" + m + "'";
+                lesRapports = context.RAPPORT_VISITE.SqlQuery(reqStr).ToList<RAPPORT_VISITE>();
+
+            }
+            return lesRapports;
+        }
+        /// <summary>
         /// Permet de créer une liste avec tous les rapports de visite de visiteurs qui ont un certain état
         /// </summary>
         /// <param name="lesMatricules">Liste de matricule (string)</param>
