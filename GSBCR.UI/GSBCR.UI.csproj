@@ -58,9 +58,6 @@
     <Reference Include="EntityFramework">
       <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="GSBCR.BLL">
-      <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\GSBCR.BLL.dll</HintPath>
-    </Reference>
     <Reference Include="GSBCR.modele">
       <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\GSBCR.modele.dll</HintPath>
     </Reference>
@@ -184,6 +181,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
+      <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
+      <Name>GSBCR.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
       <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
       <Name>GSBCR.BLL</Name>
