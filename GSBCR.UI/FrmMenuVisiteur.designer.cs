@@ -38,6 +38,7 @@
             this.btn_modifierMDP = new System.Windows.Forms.Button();
             this.btn_consult_praticien = new System.Windows.Forms.Button();
             this.btn_consulter_medicament = new System.Windows.Forms.Button();
+            this.btnVoirVisiteurEquipe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +64,7 @@
             // 
             // btnRapportValidés
             // 
-            this.btnRapportValidés.Location = new System.Drawing.Point(154, 207);
+            this.btnRapportValidés.Location = new System.Drawing.Point(154, 268);
             this.btnRapportValidés.Name = "btnRapportValidés";
             this.btnRapportValidés.Size = new System.Drawing.Size(200, 23);
             this.btnRapportValidés.TabIndex = 7;
@@ -91,7 +92,7 @@
             // 
             // btnmModifierRapport
             // 
-            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 248);
+            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 126);
             this.btnmModifierRapport.Name = "btnmModifierRapport";
             this.btnmModifierRapport.Size = new System.Drawing.Size(200, 23);
             this.btnmModifierRapport.TabIndex = 0;
@@ -100,7 +101,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(154, 333);
+            this.btnQuitter.Location = new System.Drawing.Point(315, 376);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(200, 23);
             this.btnQuitter.TabIndex = 6;
@@ -110,7 +111,7 @@
             // 
             // btn_modifierMDP
             // 
-            this.btn_modifierMDP.Location = new System.Drawing.Point(154, 292);
+            this.btn_modifierMDP.Location = new System.Drawing.Point(12, 376);
             this.btn_modifierMDP.Name = "btn_modifierMDP";
             this.btn_modifierMDP.Size = new System.Drawing.Size(200, 23);
             this.btn_modifierMDP.TabIndex = 7;
@@ -120,7 +121,7 @@
             // 
             // btn_consult_praticien
             // 
-            this.btn_consult_praticien.Location = new System.Drawing.Point(154, 139);
+            this.btn_consult_praticien.Location = new System.Drawing.Point(154, 210);
             this.btn_consult_praticien.Name = "btn_consult_praticien";
             this.btn_consult_praticien.Size = new System.Drawing.Size(200, 23);
             this.btn_consult_praticien.TabIndex = 8;
@@ -130,7 +131,7 @@
             // 
             // btn_consulter_medicament
             // 
-            this.btn_consulter_medicament.Location = new System.Drawing.Point(154, 182);
+            this.btn_consulter_medicament.Location = new System.Drawing.Point(154, 239);
             this.btn_consulter_medicament.Name = "btn_consulter_medicament";
             this.btn_consulter_medicament.Size = new System.Drawing.Size(200, 23);
             this.btn_consulter_medicament.TabIndex = 9;
@@ -138,11 +139,21 @@
             this.btn_consulter_medicament.UseVisualStyleBackColor = true;
             this.btn_consulter_medicament.Click += new System.EventHandler(this.btn_consulter_medicament_Click);
             // 
+            // btnVoirVisiteurEquipe
+            // 
+            this.btnVoirVisiteurEquipe.Location = new System.Drawing.Point(154, 297);
+            this.btnVoirVisiteurEquipe.Name = "btnVoirVisiteurEquipe";
+            this.btnVoirVisiteurEquipe.Size = new System.Drawing.Size(200, 23);
+            this.btnVoirVisiteurEquipe.TabIndex = 10;
+            this.btnVoirVisiteurEquipe.Text = "Consulter Visiteur de son équipe";
+            this.btnVoirVisiteurEquipe.Click += new System.EventHandler(this.btnVoirVisiteurEquipe_Click);
+            // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 411);
+            this.Controls.Add(this.btnVoirVisiteurEquipe);
             this.Controls.Add(this.btnmModifierRapport);
             this.Controls.Add(this.btn_consulter_medicament);
             this.Controls.Add(this.btn_consult_praticien);
@@ -173,5 +184,6 @@
         private System.Windows.Forms.Button btn_modifierMDP;
         private System.Windows.Forms.Button btn_consult_praticien;
         private System.Windows.Forms.Button btn_consulter_medicament;
+        private System.Windows.Forms.Button btnVoirVisiteurEquipe;
     }
 }

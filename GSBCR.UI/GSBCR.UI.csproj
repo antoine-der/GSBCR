@@ -121,6 +121,12 @@
     <Compile Include="FrmSaisir.designer.cs">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVoirVisiteurEquipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVoirVisiteurEquipe.Designer.cs">
+      <DependentUpon>FrmVoirVisiteurEquipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmConsulterMedicament.resx">
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSaisir.resx">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVoirVisiteurEquipe.resx">
+      <DependentUpon>FrmVoirVisiteurEquipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

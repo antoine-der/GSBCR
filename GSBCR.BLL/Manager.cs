@@ -94,6 +94,17 @@ namespace GSBCR.BLL
             }
             return lv;
         }
+        /// <summary>
+        /// Permet de retourner une liste de visiteurs pour un secteur à partir de vaffectation
+        /// </summary>
+        /// <param name="secCode">code secteur</param>
+        /// <returns>List<VISITEUR></returns>
+        public static List<VISITEUR> ChargerVisiteurBySecteur(string respon, string secteurCode)
+        {
+            List<VISITEUR> lv = new List<VISITEUR>();
+            lv = VisiteurDAO.FindBySecteur(respon, secteurCode);
+            return lv;
+        }
         /// Permet de charger les rapports avec un médicament
         /// </summary>
         /// <param name="n">Dépôt légal médicament</param>

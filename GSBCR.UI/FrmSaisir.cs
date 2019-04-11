@@ -301,7 +301,9 @@ namespace GSBCR.UI
 
         private void chbDefinitif_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (chbDefinitif.Checked == true)
+            string phrase = "";
+            bool res = false;
+            if (chbDefinitif.Checked == true && this.mode == 1)
             {
                 if (txtNumPraticien.Text == "" || dtDateVisite.Text == "" || txtCodeMotif.Text == "" || txtBilan.Text == "" || nupCoef.Text == "")
                 {
@@ -312,7 +314,44 @@ namespace GSBCR.UI
                     MessageBox.Show("Veuillez saisir le motif 'Autre'");
                 }
             }
-            
-        }
+            if (chbDefinitif.Checked == true && this.mode == 0)
+            {
+
+                if (txtMatricule.Text == "")
+                {
+                    phrase += "matricule, ";
+                    res = true;
+                }
+                if (dtDateVisite.Text == "")
+                {
+                    phrase += "date visite, ";
+                    res = true;
+                }
+                if (cbxMotif.Text == "")
+                {
+                    phrase += "motif visite, ";
+                    res = true;
+                }
+                if (txtBilan.Text == "")
+                {
+                    phrase += "bilan, ";
+                    res = true;
+                }
+                if (nupCoef.Text == "")
+                {
+                    phrase += "niveau de confiance, ";
+                    res = true;
+                }
+
+                if (res == true)
+                {
+                    MessageBox.Show("Il manque l'information " + phrase,"Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                if (txtCodeMotif.Text != "AU")
+                {
+                    MessageBox.Show("Veuillez saisir le motif 'Autre'","Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }     
+       }
     }
 }

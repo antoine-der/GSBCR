@@ -45,6 +45,14 @@ namespace GSBCR.UI
                 btnNouveau.Visible = true;
                 btnRapportValidés.Visible = true;
             }
+            if (leProfil.TRA_ROLE == "Délégué" || leProfil.TRA_ROLE == "Responsable")
+            {
+                btnVoirVisiteurEquipe.Visible = true;
+            }
+            else
+            {
+                btnVoirVisiteurEquipe.Visible = false;
+            }
         }
 
         private void btnNouveau_Click(object sender, EventArgs e)
@@ -97,6 +105,15 @@ namespace GSBCR.UI
             r.RAP_MATRICULE = leVisiteur.VIS_MATRICULE;
             FrmSaisir f = new FrmSaisir(r, true, 1);
             f.ShowDialog();
+        }
+
+        private void btnVoirVisiteurEquipe_Click(object sender, EventArgs e)
+        {
+            VISITEUR v = new VISITEUR();
+            v.VIS_MATRICULE = leVisiteur.VIS_MATRICULE;
+            v.SEC_CODE = leVisiteur.SEC_CODE;
+            FrmVoirVisiteurEquipe fvve = new FrmVoirVisiteurEquipe(v);
+            fvve.ShowDialog();
         }
     }
 }
