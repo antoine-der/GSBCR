@@ -43,7 +43,16 @@ namespace GSBCR.UI
             if (leProfil.TRA_ROLE == "Visiteur" || leProfil.TRA_ROLE == "Délégué")
             {
                 btnNouveau.Visible = true;
+                btnmModifierRapport.Visible = true;
                 btnRapportValidés.Visible = true;
+
+            }
+            else
+            {
+                btnNouveau.Visible = false;
+                btnmModifierRapport.Visible = false;
+                btnRapportValidés.Visible = false;
+                btn_modifierMDP.Visible = false;
             }
         }
 
@@ -63,7 +72,7 @@ namespace GSBCR.UI
 
         private void btn_modifierMDP_Click(object sender, EventArgs e)
         {
-            FrmModifierMDP fmdp = new FrmModifierMDP();
+            FrmModifierMDP fmdp = new FrmModifierMDP(leVisiteur);
             fmdp.ShowDialog();
         }
 
@@ -110,6 +119,11 @@ namespace GSBCR.UI
         {
             FrmNouveauRapportVisitesParRegion f = new FrmNouveauRapportVisitesParRegion();
             f.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
