@@ -98,5 +98,12 @@ namespace GSBCR.UI
             FrmSaisir f = new FrmSaisir(r, true, 1);
             f.ShowDialog();
         }
+
+        //Promouvoir un visiteur
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmPromouvoirVisiteur f = new FrmPromouvoirVisiteur(leProfil.VIS_MATRICULE);
+            f.ShowDialog();
+        }
     }
 }

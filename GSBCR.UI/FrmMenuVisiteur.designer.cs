@@ -38,6 +38,7 @@
             this.btn_modifierMDP = new System.Windows.Forms.Button();
             this.btn_consult_praticien = new System.Windows.Forms.Button();
             this.btn_consulter_medicament = new System.Windows.Forms.Button();
+            this.btn_promotion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +92,7 @@
             // 
             // btnmModifierRapport
             // 
-            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 248);
+            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 236);
             this.btnmModifierRapport.Name = "btnmModifierRapport";
             this.btnmModifierRapport.Size = new System.Drawing.Size(200, 23);
             this.btnmModifierRapport.TabIndex = 0;
@@ -110,7 +111,7 @@
             // 
             // btn_modifierMDP
             // 
-            this.btn_modifierMDP.Location = new System.Drawing.Point(154, 292);
+            this.btn_modifierMDP.Location = new System.Drawing.Point(154, 265);
             this.btn_modifierMDP.Name = "btn_modifierMDP";
             this.btn_modifierMDP.Size = new System.Drawing.Size(200, 23);
             this.btn_modifierMDP.TabIndex = 7;
@@ -138,11 +139,22 @@
             this.btn_consulter_medicament.UseVisualStyleBackColor = true;
             this.btn_consulter_medicament.Click += new System.EventHandler(this.btn_consulter_medicament_Click);
             // 
+            // btn_promotion
+            // 
+            this.btn_promotion.Location = new System.Drawing.Point(154, 295);
+            this.btn_promotion.Name = "btn_promotion";
+            this.btn_promotion.Size = new System.Drawing.Size(200, 22);
+            this.btn_promotion.TabIndex = 10;
+            this.btn_promotion.Text = "Promouvoir un visiteur";
+            this.btn_promotion.UseVisualStyleBackColor = true;
+            this.btn_promotion.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 411);
+            this.Controls.Add(this.btn_promotion);
             this.Controls.Add(this.btnmModifierRapport);
             this.Controls.Add(this.btn_consulter_medicament);
             this.Controls.Add(this.btn_consult_praticien);
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Button btn_modifierMDP;
         private System.Windows.Forms.Button btn_consult_praticien;
         private System.Windows.Forms.Button btn_consulter_medicament;
+        private System.Windows.Forms.Button btn_promotion;
     }
 }
