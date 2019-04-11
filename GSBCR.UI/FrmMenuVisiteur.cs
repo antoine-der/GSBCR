@@ -98,5 +98,18 @@ namespace GSBCR.UI
             FrmSaisir f = new FrmSaisir(r, true, 1);
             f.ShowDialog();
         }
+
+        private void btnModifierInfoPerso_Click(object sender, EventArgs e)
+        {
+            
+            FrmModifierInfoPerso f = new FrmModifierInfoPerso(this.leVisiteur);
+            f.ShowDialog();
+        }
+
+        private void btnNouveauRapportRegion_Click(object sender, EventArgs e)
+        {
+            FrmNouveauRapportVisitesParRegion f = new FrmNouveauRapportVisitesParRegion();
+            f.ShowDialog();
+        }
     }
 }

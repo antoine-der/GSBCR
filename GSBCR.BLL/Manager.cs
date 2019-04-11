@@ -25,6 +25,12 @@ namespace GSBCR.BLL
                 return null;
 
         }
+
+
+        public static void MajInfosPersos(VISITEUR v)
+        {
+            VisiteurDAO.update(v);
+        }
         /// <summary>
         /// Permet de charger la dernière affectation du visiteur
         /// et donc son profil (visiteur, délégué, responsabe secteur) et sa région

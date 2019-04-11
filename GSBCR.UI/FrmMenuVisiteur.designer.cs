@@ -38,6 +38,8 @@
             this.btn_modifierMDP = new System.Windows.Forms.Button();
             this.btn_consult_praticien = new System.Windows.Forms.Button();
             this.btn_consulter_medicament = new System.Windows.Forms.Button();
+            this.btnModifierInfoPerso = new System.Windows.Forms.Button();
+            this.btnNouveauRapportRegion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -100,7 +102,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(154, 333);
+            this.btnQuitter.Location = new System.Drawing.Point(154, 444);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(200, 23);
             this.btnQuitter.TabIndex = 6;
@@ -138,11 +140,33 @@
             this.btn_consulter_medicament.UseVisualStyleBackColor = true;
             this.btn_consulter_medicament.Click += new System.EventHandler(this.btn_consulter_medicament_Click);
             // 
+            // btnModifierInfoPerso
+            // 
+            this.btnModifierInfoPerso.Location = new System.Drawing.Point(154, 344);
+            this.btnModifierInfoPerso.Name = "btnModifierInfoPerso";
+            this.btnModifierInfoPerso.Size = new System.Drawing.Size(200, 23);
+            this.btnModifierInfoPerso.TabIndex = 10;
+            this.btnModifierInfoPerso.Text = "Modifier Informations persosonelles";
+            this.btnModifierInfoPerso.UseVisualStyleBackColor = true;
+            this.btnModifierInfoPerso.Click += new System.EventHandler(this.btnModifierInfoPerso_Click);
+            // 
+            // btnNouveauRapportRegion
+            // 
+            this.btnNouveauRapportRegion.Location = new System.Drawing.Point(154, 385);
+            this.btnNouveauRapportRegion.Name = "btnNouveauRapportRegion";
+            this.btnNouveauRapportRegion.Size = new System.Drawing.Size(200, 23);
+            this.btnNouveauRapportRegion.TabIndex = 11;
+            this.btnNouveauRapportRegion.Text = "Consulter Nouveau rapport Region";
+            this.btnNouveauRapportRegion.UseVisualStyleBackColor = true;
+            this.btnNouveauRapportRegion.Click += new System.EventHandler(this.btnNouveauRapportRegion_Click);
+            // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 411);
+            this.ClientSize = new System.Drawing.Size(527, 479);
+            this.Controls.Add(this.btnNouveauRapportRegion);
+            this.Controls.Add(this.btnModifierInfoPerso);
             this.Controls.Add(this.btnmModifierRapport);
             this.Controls.Add(this.btn_consulter_medicament);
             this.Controls.Add(this.btn_consult_praticien);
@@ -173,5 +197,7 @@
         private System.Windows.Forms.Button btn_modifierMDP;
         private System.Windows.Forms.Button btn_consult_praticien;
         private System.Windows.Forms.Button btn_consulter_medicament;
+        private System.Windows.Forms.Button btnModifierInfoPerso;
+        private System.Windows.Forms.Button btnNouveauRapportRegion;
     }
 }
