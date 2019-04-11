@@ -20,12 +20,36 @@ namespace GSBCR.UI
         /// <param name="maj">code maj</param>
         /// <returns></returns>
         private RAPPORT_VISITE r;
+        private int mode;
+        private int cnt;
         //maj = vrai si création/modification
         //maj = faux si consultation
-        public FrmSaisir(RAPPORT_VISITE r, bool maj)
+        public FrmSaisir(RAPPORT_VISITE r, bool maj, int mode)
         {
             InitializeComponent();
             this.r = r;
+            this.mode = mode;
+            if (this.mode == 0)
+            {
+                cbxLesRapports.Hide();
+                lblSelection.Hide();
+
+            }
+            else if (this.mode == 1)
+            {
+            List<RAPPORT_VISITE> lr = Manager.ChargerRapportVisiteurEncours("a131");
+            bsRapportEnCours.DataSource = lr;
+            cbxLesRapports.DataSource = bsRapportEnCours;
+            cbxLesRapports.DisplayMember = "RAP_NUM";
+            cbxLesRapports.ValueMember = "RAP_NUM";
+            cbxLesRapports.SelectedIndex = -1;
+            }
+            if(cbxLesRapports == null)
+            {
+                MessageBox.Show("Il n'y a pas de rapport de visite en cours");
+                this.Close();
+            }
+
             //Initialisation de la liste déroulante praticien
             List<PRATICIEN> lp = Manager.ChargerPraticiens();
             bsPraticien.DataSource = lp;
@@ -147,9 +171,11 @@ namespace GSBCR.UI
                 }
                 else
                 {
+                    r.RAP_NUM = Convert.ToInt16(cbxLesRapports.SelectedValue);
                     Manager.MajRapport(r);
+                    
                 }
-
+                
                 MessageBox.Show("Rapport de visite n° " + r.RAP_NUM + " enregistré", "Mise à Jour des données", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.Close();
@@ -159,7 +185,6 @@ namespace GSBCR.UI
 
                 MessageBox.Show("Abandon traitement : " + ex.GetBaseException().Message, "Erreur base de données", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                      
             btnValider.Enabled = true;
         }
 
@@ -232,6 +257,61 @@ namespace GSBCR.UI
 
         private void btnVoirMed2_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void cbxLesRapports_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            List<RAPPORT_VISITE> lr = Manager.ChargerRapportVisiteurEncours(txtMatricule.Text);
+            this.cnt = lr.Count;
+            if (cbxLesRapports.SelectedIndex != -1)
+            {
+                txtNum.Text = cbxLesRapports.SelectedValue.ToString();               
+                
+            }
+            else { 
+                txtNum.Text = String.Empty;
+            }
+               
+        }
+
+        private void txtNum_TextChanged(object sender, EventArgs e)
+        {
+            if (cnt==cbxLesRapports.Items.Count)
+            {
+                RAPPORT_VISITE r = new RAPPORT_VISITE();
+                r = Manager.ChargerRapportVisite(txtMatricule.Text, Convert.ToInt16(txtNum.Text));
+                PRATICIEN p = new PRATICIEN();
+
+                dtDateVisite.Value = r.RAP_DATVISIT;
+                cbxNomPraticien.SelectedValue = r.RAP_PRANUM;
+                cbxMotif.SelectedValue = r.RAP_MOTIF;
+                txtBilan.Text = r.RAP_BILAN;
+                txtCodeMotif.Text = r.RAP_MOTIF;
+                nupCoef.Value = Convert.ToDecimal(r.RAP_CONFIANCE);
+                txtMed1.Text = r.RAP_MED1;
+                txtMed2.Text = r.RAP_MED2;
+                cbxMed1.SelectedValue = r.RAP_MED1;
+                cbxMed2.SelectedValue = r.RAP_MED2;
+
+            }
+         
+        }
+
+        private void chbDefinitif_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (chbDefinitif.Checked == true)
+            {
+                if (txtNumPraticien.Text == "" || dtDateVisite.Text == "" || txtCodeMotif.Text == "" || txtBilan.Text == "" || nupCoef.Text == "")
+                {
+                    MessageBox.Show("Un ou plusieurs champs obligatoire n'ont pas été saisies : code praticien, date visite, motif visite, bilan, niveau confiance");
+                }
+                if (txtCodeMotif.Text != "AU")
+                {
+                    MessageBox.Show("Veuillez saisir le motif 'Autre'");
+                }
+            }
             
         }
     }

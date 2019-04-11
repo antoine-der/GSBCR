@@ -15,11 +15,7 @@ namespace GSBCR.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            /* TEST */
-             Application.Run(new FrmMenuVisiteur());
-             //Application.Run(new FrmConsulterPraticien("a131"));
-             //Application.Run(new FrmDetailRapportVisite("a131", 3));
-             //Application.Run(new FrmConsulterMedicament("a131"));            
+            Application.Run(new FrmConnexion());
         }
     }
 }

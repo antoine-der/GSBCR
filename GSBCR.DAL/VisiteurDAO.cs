@@ -31,6 +31,5 @@ namespace GSBCR.DAL
             }
             return vis;
         }
-              
     }
 }
