@@ -40,8 +40,8 @@
             this.btn_consulter_medicament = new System.Windows.Forms.Button();
             this.btnModifierInfoPerso = new System.Windows.Forms.Button();
             this.btnNouveauRapportRegion = new System.Windows.Forms.Button();
-            this.btn_deconnexion = new System.Windows.Forms.Button();
             this.btn_promotion = new System.Windows.Forms.Button();
+            this.btn_deconnexion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -162,19 +162,9 @@
             this.btnNouveauRapportRegion.UseVisualStyleBackColor = true;
             this.btnNouveauRapportRegion.Click += new System.EventHandler(this.btnNouveauRapportRegion_Click);
             // 
-            // btn_deconnexion
-            // 
-            this.btn_deconnexion.Location = new System.Drawing.Point(154, 338);
-            this.btn_deconnexion.Name = "btn_deconnexion";
-            this.btn_deconnexion.Size = new System.Drawing.Size(200, 23);
-            this.btn_deconnexion.TabIndex = 10;
-            this.btn_deconnexion.Text = "Se déconnecter";
-            this.btn_deconnexion.UseVisualStyleBackColor = true;
-            this.btn_deconnexion.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btn_promotion
             // 
-            this.btn_promotion.Location = new System.Drawing.Point(154, 295);
+            this.btn_promotion.Location = new System.Drawing.Point(154, 292);
             this.btn_promotion.Name = "btn_promotion";
             this.btn_promotion.Size = new System.Drawing.Size(200, 22);
             this.btn_promotion.TabIndex = 10;
@@ -182,15 +172,24 @@
             this.btn_promotion.UseVisualStyleBackColor = true;
             this.btn_promotion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_deconnexion
+            // 
+            this.btn_deconnexion.Location = new System.Drawing.Point(154, 320);
+            this.btn_deconnexion.Name = "btn_deconnexion";
+            this.btn_deconnexion.Size = new System.Drawing.Size(200, 18);
+            this.btn_deconnexion.TabIndex = 12;
+            this.btn_deconnexion.Text = "Se deconnecter";
+            this.btn_deconnexion.UseVisualStyleBackColor = true;
+            this.btn_deconnexion.Click += new System.EventHandler(this.btn_deconnexion_Click);
+            // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 479);
-            this.Controls.Add(this.btnNouveauRapportRegion);
-            this.Controls.Add(this.btnModifierInfoPerso);
             this.ClientSize = new System.Drawing.Size(527, 411);
             this.Controls.Add(this.btn_deconnexion);
+            this.Controls.Add(this.btnNouveauRapportRegion);
+            this.Controls.Add(this.btnModifierInfoPerso);
             this.Controls.Add(this.btn_promotion);
             this.Controls.Add(this.btnmModifierRapport);
             this.Controls.Add(this.btn_consulter_medicament);
@@ -224,7 +223,7 @@
         private System.Windows.Forms.Button btn_consulter_medicament;
         private System.Windows.Forms.Button btnModifierInfoPerso;
         private System.Windows.Forms.Button btnNouveauRapportRegion;
-        private System.Windows.Forms.Button btn_deconnexion;
         private System.Windows.Forms.Button btn_promotion;
+        private System.Windows.Forms.Button btn_deconnexion;
     }
 }
