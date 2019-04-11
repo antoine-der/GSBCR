@@ -100,6 +100,18 @@
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModifierInfoPerso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifierInfoPerso.Designer.cs">
+      <DependentUpon>FrmModifierInfoPerso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNouveauRapportVisitesParRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNouveauRapportVisitesParRegion.Designer.cs">
+      <DependentUpon>FrmNouveauRapportVisitesParRegion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPromouvoirVisiteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifierInfoPerso.resx">
+      <DependentUpon>FrmModifierInfoPerso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNouveauRapportVisitesParRegion.resx">
+      <DependentUpon>FrmNouveauRapportVisitesParRegion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPromouvoirVisiteur.resx">
       <DependentUpon>FrmPromouvoirVisiteur.cs</DependentUpon>
