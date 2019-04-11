@@ -31,5 +31,24 @@ namespace GSBCR.DAL
             }
             return vis;
         }
+
+        public static void MajMDP(VISITEUR v)
+        {
+            using (var context = new GSB_VisiteEntities())
+            {
+                try
+                {
+                    //mise à jour de l'état du rapport 
+                    context.Entry<VISITEUR>(v).State = System.Data.EntityState.Modified;
+                    //sauvegarde du contexte
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+            }
+        }
     }
 }
