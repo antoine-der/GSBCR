@@ -104,7 +104,7 @@
             // 
             // btnVoirLePraticien
             // 
-            this.btnVoirLePraticien.Location = new System.Drawing.Point(631, 182);
+            this.btnVoirLePraticien.Location = new System.Drawing.Point(327, 146);
             this.btnVoirLePraticien.Name = "btnVoirLePraticien";
             this.btnVoirLePraticien.Size = new System.Drawing.Size(101, 23);
             this.btnVoirLePraticien.TabIndex = 50;

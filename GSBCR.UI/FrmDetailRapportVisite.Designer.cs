@@ -190,7 +190,7 @@
             // 
             // btn_quitter
             // 
-            this.btn_quitter.BackColor = System.Drawing.Color.Tomato;
+            this.btn_quitter.BackColor = System.Drawing.Color.Transparent;
             this.btn_quitter.Location = new System.Drawing.Point(177, 529);
             this.btn_quitter.Name = "btn_quitter";
             this.btn_quitter.Size = new System.Drawing.Size(93, 33);

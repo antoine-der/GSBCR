@@ -177,6 +177,7 @@
             // 
             // lbxRapports
             // 
+            this.lbxRapports.DataSource = this.bsRapport;
             this.lbxRapports.FormattingEnabled = true;
             this.lbxRapports.Location = new System.Drawing.Point(468, 92);
             this.lbxRapports.Name = "lbxRapports";

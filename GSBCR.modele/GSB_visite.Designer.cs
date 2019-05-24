@@ -1,4 +1,4 @@
-﻿// La génération de code T4 est activée pour le modèle 'D:\Cours 2ème année\PPE3-R\GSBCR Clone\GSBCR.modele\GSB_visite.edmx'. 
+﻿// La génération de code T4 est activée pour le modèle 'E:\www\BONNEVILLE.Sacha\PPE\GSBCR\GSBCR.modele\GSB_visite.edmx'. 
 // Pour activer la génération de code héritée, définissez la valeur de la propriété
 // du concepteur 'Stratégie de génération de code' sur 'ObjectContext hérité'. Cette propriété est disponible dans la fenêtre Propriétés lorsque le modèle
 //  est ouvert dans le concepteur.

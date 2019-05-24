@@ -36,7 +36,8 @@ namespace GSBCR.UI
             string mat = txt_mat.Text;
             string mdp = txt_mdp.Text;
             vis = Manager.ChargerVisiteur(mat, mdp);
-            if (string.IsNullOrWhiteSpace(txt_mat.Text) || string.IsNullOrWhiteSpace(txt_mdp.Text))
+            //if (string.IsNullOrWhiteSpace(txt_mat.Text) && string.IsNullOrWhiteSpace(txt_mdp.Text))
+            if (txt_mat.Text == null || txt_mat.Text == "" && txt_mdp.Text == null || txt_mdp.Text == "")
             {
                 MessageBox.Show("Les identifiants sont nulls ou incorrectes");
             }

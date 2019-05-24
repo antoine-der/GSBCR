@@ -37,13 +37,13 @@
             this.cbxMed1 = new System.Windows.Forms.ComboBox();
             this.checkBox_afficher_rapport = new System.Windows.Forms.CheckBox();
             this.listBox_numRapport = new System.Windows.Forms.ListBox();
+            this.bsRapport1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_quitter = new System.Windows.Forms.Button();
             this.btn_choisirRapport = new System.Windows.Forms.Button();
             this.bsMed1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bsRapport1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsMed1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapport1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMed1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -57,7 +57,7 @@
             // 
             // btn_choisir_medicament
             // 
-            this.btn_choisir_medicament.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btn_choisir_medicament.BackColor = System.Drawing.Color.Transparent;
             this.btn_choisir_medicament.Location = new System.Drawing.Point(662, 50);
             this.btn_choisir_medicament.Name = "btn_choisir_medicament";
             this.btn_choisir_medicament.Size = new System.Drawing.Size(75, 23);
@@ -114,7 +114,7 @@
             // 
             // btn_quitter
             // 
-            this.btn_quitter.BackColor = System.Drawing.Color.Tomato;
+            this.btn_quitter.BackColor = System.Drawing.Color.Transparent;
             this.btn_quitter.Location = new System.Drawing.Point(122, 612);
             this.btn_quitter.Name = "btn_quitter";
             this.btn_quitter.Size = new System.Drawing.Size(89, 30);
@@ -125,7 +125,7 @@
             // 
             // btn_choisirRapport
             // 
-            this.btn_choisirRapport.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btn_choisirRapport.BackColor = System.Drawing.Color.Transparent;
             this.btn_choisirRapport.Location = new System.Drawing.Point(755, 480);
             this.btn_choisirRapport.Name = "btn_choisirRapport";
             this.btn_choisirRapport.Size = new System.Drawing.Size(96, 38);
@@ -151,8 +151,8 @@
             this.Name = "FrmConsulterMedicament";
             this.Text = "FrmConsulterMedicament";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsMed1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapport1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMed1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

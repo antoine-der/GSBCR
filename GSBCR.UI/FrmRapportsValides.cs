@@ -19,6 +19,7 @@ namespace GSBCR.UI
         public FrmRapportsValides(VISITEUR v)
         {
             InitializeComponent();
+            btnVoirLePraticien.Visible = false;
             bsRapport.DataSource = Manager.ChargerRapportVisiteurFinis(v.VIS_MATRICULE);
             cbxRapport.DataSource = bsRapport;
             cbxRapport.DisplayMember = "RAP_NUM";
@@ -27,12 +28,14 @@ namespace GSBCR.UI
 
         private void cbxRapport_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            ucPraticien1.Visible = false;            
             if (cbxRapport.SelectedIndex != -1)
-            {
+            {                
                 RAPPORT_VISITE r = (RAPPORT_VISITE)cbxRapport.SelectedItem;
                 ucRapportsValides1.LeRapportVisite = r;
                 ucRapportsValides1.Visible = true;
+                btnVoirLePraticien.Visible = true;
             }
 
             if (ucRapportsValides1.Visible == false)

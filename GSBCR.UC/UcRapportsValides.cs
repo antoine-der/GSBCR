@@ -52,10 +52,10 @@ namespace GSBCR.UC
 
         private void UcRapportsValides_Load(object sender, EventArgs e)
         {
-            txtBilan.Visible = false;
-            txtCoefConfiance.Visible = false;
-            labelBilan.Visible = false;
-            labelCoeff.Visible = false;
+            txtBilan.Visible = true;
+            txtCoefConfiance.Visible = true;
+            labelBilan.Visible = true;
+            labelCoeff.Visible = true;
 
         }
 
@@ -73,14 +73,6 @@ namespace GSBCR.UC
             txtCoefConfiance.Visible = true;
             labelBilan.Visible = true;
             labelCoeff.Visible = true;
-
-            if (checkBxDetail.Checked == false)
-            {
-                txtBilan.Visible = false;
-                txtCoefConfiance.Visible = false;
-                labelBilan.Visible = false;
-                labelCoeff.Visible = false;
-            }
         }
     }
 }

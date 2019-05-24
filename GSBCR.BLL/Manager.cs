@@ -25,13 +25,18 @@ namespace GSBCR.BLL
                 return null;
 
         }
-
-
+        /// <summary>
+        /// Permet de modifier les infos perso du visiteur
+        /// </summary>
+        /// <param name="v">Infos du visiteur</param>
         public static void MajInfosPersos(VISITEUR v)
         {
             VisiteurDAO.update(v);
         }
-
+        /// <summary>
+        /// Permet de modifier le mot de passe d'un visiteur
+        /// </summary>
+        /// <param name="v">Infos du visiteur</param>
         public static void MajMotDePasse(VISITEUR v)
         {
             VisiteurDAO.MajMDP(v);
@@ -88,40 +93,22 @@ namespace GSBCR.BLL
             lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
             return lr;
         }
-
-
-
-
-
-        /// Permet de charger touts les visiteurs
+        /// Permet de charger tous les visiteurs d'un region
         /// </summary>
         /// <returns>List<VISITEUR>/returns>
-        public static List<VISITEUR> chargerLesVisiteurs(string secteur)
+        public static List<VISITEUR> chargerLesVisiteurs(string region)
         {
             List<VISITEUR> vis;
-            //vis = VisiteurDAO.FindAll();
-            vis = VisiteurDAO.FindAllInSec(secteur);
+            vis = VisiteurDAO.FindAllInReg(region);
             return vis;
         }
-        /// Permet de charger un secteur avec une région passée en paramètre
+        /// Permet de promouvoir un visiteur, délégué de region
         /// </summary>
         /// <returns>List<VISITEUR>/returns>
-        public static string getSecteur(string region)
+        public static void promouvoirVisiteur(TRAVAILLER tra)
         {
-            string sec;
-            sec = VisiteurDAO.getSecteur(region);
-            return sec;
+            VisiteurDAO.promouvoir(tra);
         }
-
-
-
-
-
-
-
-
-
-
         /// <summary>
         /// Permet de retourner une liste de visiteurs pour un région à partir de vaffectation
         /// </summary>

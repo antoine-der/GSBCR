@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GSBCR.modele;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Windows.Forms;
 
 namespace GSBCR.DAL
 {
@@ -85,7 +86,6 @@ namespace GSBCR.DAL
             List<RAPPORT_VISITE> lesRapports = null;
             using (var context = new GSB_VisiteEntities())
             {
-                //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
                 int i = 0;
                 string reqStr = "select * from RAPPORT_VISITE r where r.RAP_MATRICULE in(";
@@ -131,7 +131,7 @@ namespace GSBCR.DAL
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    MessageBox.Show("La requête n'a pas marché (veuillez renseigner 2 medicaments)");
                 } 
             }
 

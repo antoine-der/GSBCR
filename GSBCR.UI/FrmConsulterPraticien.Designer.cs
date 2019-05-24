@@ -74,7 +74,7 @@
             // 
             // btn_choisir_praticien
             // 
-            this.btn_choisir_praticien.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btn_choisir_praticien.BackColor = System.Drawing.Color.Transparent;
             this.btn_choisir_praticien.Location = new System.Drawing.Point(643, 47);
             this.btn_choisir_praticien.Name = "btn_choisir_praticien";
             this.btn_choisir_praticien.Size = new System.Drawing.Size(96, 23);
@@ -105,7 +105,7 @@
             // 
             // btn_choisirRapport
             // 
-            this.btn_choisirRapport.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btn_choisirRapport.BackColor = System.Drawing.Color.Transparent;
             this.btn_choisirRapport.ForeColor = System.Drawing.Color.Black;
             this.btn_choisirRapport.Location = new System.Drawing.Point(781, 421);
             this.btn_choisirRapport.Name = "btn_choisirRapport";
@@ -117,7 +117,7 @@
             // 
             // btn_quitter
             // 
-            this.btn_quitter.BackColor = System.Drawing.Color.Tomato;
+            this.btn_quitter.BackColor = System.Drawing.Color.Transparent;
             this.btn_quitter.Location = new System.Drawing.Point(141, 500);
             this.btn_quitter.Name = "btn_quitter";
             this.btn_quitter.Size = new System.Drawing.Size(81, 29);

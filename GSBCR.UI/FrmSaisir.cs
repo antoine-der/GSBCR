@@ -27,6 +27,7 @@ namespace GSBCR.UI
         public FrmSaisir(RAPPORT_VISITE r, bool maj, int mode)
         {
             InitializeComponent();
+            btnVoirPatricien.Enabled = false;
             this.r = r;
             this.mode = mode;
             if (this.mode == 0)
@@ -156,8 +157,14 @@ namespace GSBCR.UI
             r.RAP_CONFIANCE = nupCoef.Value.ToString();
             r.RAP_PRANUM= Convert.ToInt16(cbxNomPraticien.SelectedValue);
             r.RAP_BILAN = txtBilan.Text;
-            r.RAP_MED1 = txtMed1.Text;
-            r.RAP_MED2 = txtMed2.Text;
+            if(txtMed1.Text != "")
+            {
+                r.RAP_MED1 = txtMed1.Text;
+            }
+            if (txtMed2.Text != "")
+            {
+                r.RAP_MED2 = txtMed2.Text;
+            }
             if (chbDefinitif.Checked)
                 r.RAP_ETAT = "2";
             else
@@ -194,6 +201,8 @@ namespace GSBCR.UI
                 txtNumPraticien.Text = cbxNomPraticien.SelectedValue.ToString();
             else
                 txtNumPraticien.Text = String.Empty;
+
+            btnVoirPatricien.Enabled = true;
         }
 
         private void cbxMotif_SelectedIndexChanged(object sender, EventArgs e)
@@ -252,12 +261,14 @@ namespace GSBCR.UI
 
         private void btnVoirmed1_Click(object sender, EventArgs e)
         {
-            
+            FrmDetailsMedicament f = new FrmDetailsMedicament(txtMed1.Text);
+            f.ShowDialog();
         }
 
         private void btnVoirMed2_Click(object sender, EventArgs e)
         {
-            
+            FrmDetailsMedicament f = new FrmDetailsMedicament(txtMed2.Text);
+            f.ShowDialog();
         }
 
         private void cbxLesRapports_SelectedIndexChanged(object sender, EventArgs e)
@@ -276,27 +287,9 @@ namespace GSBCR.UI
                
         }
 
+        //Fonction non utilisée mais qui ne peut être supprimée sans endommager le formulaire
         private void txtNum_TextChanged(object sender, EventArgs e)
-        {
-            if (cnt==cbxLesRapports.Items.Count)
-            {
-                RAPPORT_VISITE r = new RAPPORT_VISITE();
-                r = Manager.ChargerRapportVisite(txtMatricule.Text, Convert.ToInt16(txtNum.Text));
-                PRATICIEN p = new PRATICIEN();
-
-                dtDateVisite.Value = r.RAP_DATVISIT;
-                cbxNomPraticien.SelectedValue = r.RAP_PRANUM;
-                cbxMotif.SelectedValue = r.RAP_MOTIF;
-                txtBilan.Text = r.RAP_BILAN;
-                txtCodeMotif.Text = r.RAP_MOTIF;
-                nupCoef.Value = Convert.ToDecimal(r.RAP_CONFIANCE);
-                txtMed1.Text = r.RAP_MED1;
-                txtMed2.Text = r.RAP_MED2;
-                cbxMed1.SelectedValue = r.RAP_MED1;
-                cbxMed2.SelectedValue = r.RAP_MED2;
-
-            }
-         
+        {         
         }
 
         private void chbDefinitif_CheckedChanged_1(object sender, EventArgs e)
@@ -308,10 +301,6 @@ namespace GSBCR.UI
                 if (txtNumPraticien.Text == "" || dtDateVisite.Text == "" || txtCodeMotif.Text == "" || txtBilan.Text == "" || nupCoef.Text == "")
                 {
                     MessageBox.Show("Un ou plusieurs champs obligatoire n'ont pas été saisies : code praticien, date visite, motif visite, bilan, niveau confiance");
-                }
-                if (txtCodeMotif.Text != "AU")
-                {
-                    MessageBox.Show("Veuillez saisir le motif 'Autre'");
                 }
             }
             if (chbDefinitif.Checked == true && this.mode == 0)
@@ -347,11 +336,18 @@ namespace GSBCR.UI
                 {
                     MessageBox.Show("Il manque l'information " + phrase,"Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-                if (txtCodeMotif.Text != "AU")
-                {
-                    MessageBox.Show("Veuillez saisir le motif 'Autre'","Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
             }     
        }
+
+        private void btnVoirPatricien_Click(object sender, EventArgs e)
+        {
+            FrmDetailsPraticien f = new FrmDetailsPraticien(short.Parse(txtNumPraticien.Text));
+            f.ShowDialog();
+        }
+
+        private void txtAutre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,7 +45,6 @@
             this.txtMed2 = new System.Windows.Forms.TextBox();
             this.txtMed1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBxDetail = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,22 +202,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Médicaments présentés";
             // 
-            // checkBxDetail
-            // 
-            this.checkBxDetail.AutoSize = true;
-            this.checkBxDetail.Location = new System.Drawing.Point(286, 126);
-            this.checkBxDetail.Name = "checkBxDetail";
-            this.checkBxDetail.Size = new System.Drawing.Size(89, 17);
-            this.checkBxDetail.TabIndex = 73;
-            this.checkBxDetail.Text = "Détail rapport";
-            this.checkBxDetail.UseVisualStyleBackColor = true;
-            this.checkBxDetail.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // UcRapportsValides
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.checkBxDetail);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtEtat);
             this.Controls.Add(this.label1);
@@ -261,7 +248,6 @@
         private System.Windows.Forms.TextBox txtMed2;
         private System.Windows.Forms.TextBox txtMed1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBxDetail;
         public System.Windows.Forms.TextBox txtNumPrat;
     }
 }

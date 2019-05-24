@@ -58,12 +58,12 @@
             this.cbxMed1 = new System.Windows.Forms.ComboBox();
             this.txtMatricule = new System.Windows.Forms.TextBox();
             this.btnVoirPatricien = new System.Windows.Forms.Button();
+            this.lblSelection = new System.Windows.Forms.Label();
+            this.cbxLesRapports = new System.Windows.Forms.ComboBox();
             this.bsPraticien = new System.Windows.Forms.BindingSource(this.components);
             this.bsMotif = new System.Windows.Forms.BindingSource(this.components);
             this.bsMed1 = new System.Windows.Forms.BindingSource(this.components);
             this.bsMed2 = new System.Windows.Forms.BindingSource(this.components);
-            this.lblSelection = new System.Windows.Forms.Label();
-            this.cbxLesRapports = new System.Windows.Forms.ComboBox();
             this.bsRapportEnCours = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nupCoef)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -208,6 +208,7 @@
             this.txtAutre.Name = "txtAutre";
             this.txtAutre.Size = new System.Drawing.Size(100, 20);
             this.txtAutre.TabIndex = 14;
+            this.txtAutre.TextChanged += new System.EventHandler(this.txtAutre_TextChanged);
             // 
             // chbDefinitif
             // 
@@ -268,7 +269,7 @@
             this.groupBox1.Controls.Add(this.cbxMed1);
             this.groupBox1.Location = new System.Drawing.Point(15, 344);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 100);
+            this.groupBox1.Size = new System.Drawing.Size(596, 100);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Médicaments présentés";
@@ -344,6 +345,7 @@
             this.btnVoirPatricien.TabIndex = 24;
             this.btnVoirPatricien.Text = "voir le praticien";
             this.btnVoirPatricien.UseVisualStyleBackColor = true;
+            this.btnVoirPatricien.Click += new System.EventHandler(this.btnVoirPatricien_Click);
             // 
             // lblSelection
             // 
