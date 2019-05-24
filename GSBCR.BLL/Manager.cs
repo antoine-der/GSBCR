@@ -25,6 +25,17 @@ namespace GSBCR.BLL
                 return null;
 
         }
+
+
+        public static void MajInfosPersos(VISITEUR v)
+        {
+            VisiteurDAO.update(v);
+        }
+
+        public static void MajMotDePasse(VISITEUR v)
+        {
+            VisiteurDAO.MajMDP(v);
+        }
         /// <summary>
         /// Permet de charger la dernière affectation du visiteur
         /// et donc son profil (visiteur, délégué, responsabe secteur) et sa région
@@ -77,6 +88,40 @@ namespace GSBCR.BLL
             lr = RapportVisiteDAO.FindByEtatEtVisiteur(lm, le);
             return lr;
         }
+
+
+
+
+
+        /// Permet de charger touts les visiteurs
+        /// </summary>
+        /// <returns>List<VISITEUR>/returns>
+        public static List<VISITEUR> chargerLesVisiteurs(string secteur)
+        {
+            List<VISITEUR> vis;
+            //vis = VisiteurDAO.FindAll();
+            vis = VisiteurDAO.FindAllInSec(secteur);
+            return vis;
+        }
+        /// Permet de charger un secteur avec une région passée en paramètre
+        /// </summary>
+        /// <returns>List<VISITEUR>/returns>
+        public static string getSecteur(string region)
+        {
+            string sec;
+            sec = VisiteurDAO.getSecteur(region);
+            return sec;
+        }
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// Permet de retourner une liste de visiteurs pour un région à partir de vaffectation
         /// </summary>

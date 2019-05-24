@@ -53,8 +53,10 @@
             // 
             this.txt_mdp_actuel.Location = new System.Drawing.Point(254, 91);
             this.txt_mdp_actuel.Name = "txt_mdp_actuel";
+            this.txt_mdp_actuel.PasswordChar = '*';
             this.txt_mdp_actuel.Size = new System.Drawing.Size(158, 20);
             this.txt_mdp_actuel.TabIndex = 5;
+            this.txt_mdp_actuel.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -87,18 +89,23 @@
             // 
             this.txt_mdp_new.Location = new System.Drawing.Point(254, 143);
             this.txt_mdp_new.Name = "txt_mdp_new";
+            this.txt_mdp_new.PasswordChar = '*';
             this.txt_mdp_new.Size = new System.Drawing.Size(158, 20);
             this.txt_mdp_new.TabIndex = 9;
+            this.txt_mdp_new.UseSystemPasswordChar = true;
             // 
             // txt_mdp_c_new
             // 
             this.txt_mdp_c_new.Location = new System.Drawing.Point(254, 191);
             this.txt_mdp_c_new.Name = "txt_mdp_c_new";
+            this.txt_mdp_c_new.PasswordChar = '*';
             this.txt_mdp_c_new.Size = new System.Drawing.Size(158, 20);
             this.txt_mdp_c_new.TabIndex = 10;
+            this.txt_mdp_c_new.UseSystemPasswordChar = true;
             // 
             // btn_valider
             // 
+            this.btn_valider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_valider.Location = new System.Drawing.Point(195, 251);
             this.btn_valider.Name = "btn_valider";
             this.btn_valider.Size = new System.Drawing.Size(89, 23);
