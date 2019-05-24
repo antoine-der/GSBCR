@@ -40,29 +40,38 @@ namespace GSBCR.UI
         {
             label2.Text = leProfil.TRA_ROLE + " " + leVisiteur.Vis_PRENOM + " " + leVisiteur.VIS_NOM;
             label3.Text = "Region : " + leProfil.REG_CODE;
-            if (leProfil.TRA_ROLE == "Visiteur" || leProfil.TRA_ROLE == "Délégué")
+            if (leProfil.TRA_ROLE == "Visiteur")
             {
+                btn_consult_praticien.Visible = true;
+                btn_consulter_medicament.Visible = true;
+                btnModifierInfoPerso.Visible = true;
+                btn_modifierMDP.Visible = true;
                 btnNouveau.Visible = true;
                 btnmModifierRapport.Visible = true;
                 btnRapportValidés.Visible = true;
-
             }
-            else
+            else if (leProfil.TRA_ROLE == "Délégué")
             {
-                btnNouveau.Visible = false;
-                btnmModifierRapport.Visible = false;
-                btnRapportValidés.Visible = false;
-                btn_modifierMDP.Visible = false;
-            }
-        }
-            if (leProfil.TRA_ROLE == "Délégué" || leProfil.TRA_ROLE == "Responsable")
-            {
+                btn_consult_praticien.Visible = true;
+                btn_consulter_medicament.Visible = true;
+                btnModifierInfoPerso.Visible = true;
+                btn_modifierMDP.Visible = true;
+                btnNouveau.Visible = true;
+                btnmModifierRapport.Visible = true;
+                btnRapportValidés.Visible = true;
+                btnNouveauRapportRegion.Visible = true;
                 btnVoirVisiteurEquipe.Visible = true;
             }
-            else
+            else if (leProfil.TRA_ROLE == "Responsable")
             {
-                btnVoirVisiteurEquipe.Visible = false;
+                btn_consult_praticien.Visible = true;
+                btn_consulter_medicament.Visible = true;
+                btnModifierInfoPerso.Visible = true;
+                btn_modifierMDP.Visible = true;
+                btnVoirVisiteurEquipe.Visible = true;
+                btn_promotion.Visible = true;
             }
+            
         }
 
         private void btnNouveau_Click(object sender, EventArgs e)
@@ -133,7 +142,9 @@ namespace GSBCR.UI
 
         private void btnNouveauRapportRegion_Click(object sender, EventArgs e)
         {
-            FrmNouveauRapportVisitesParRegion f = new FrmNouveauRapportVisitesParRegion();
+            VAFFECTATION vaff = new VAFFECTATION();
+            vaff = leProfil;
+            FrmNouveauRapportVisitesParRegion f = new FrmNouveauRapportVisitesParRegion(vaff);
             f.ShowDialog();
         }
 

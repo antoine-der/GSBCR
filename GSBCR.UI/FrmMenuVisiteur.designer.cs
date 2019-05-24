@@ -57,7 +57,7 @@
             // 
             // btnNouveau
             // 
-            this.btnNouveau.Location = new System.Drawing.Point(154, 205);
+            this.btnNouveau.Location = new System.Drawing.Point(177, 303);
             this.btnNouveau.Name = "btnNouveau";
             this.btnNouveau.Size = new System.Drawing.Size(200, 23);
             this.btnNouveau.TabIndex = 2;
@@ -68,12 +68,13 @@
             // 
             // btnRapportValidés
             // 
-            this.btnRapportValidés.Location = new System.Drawing.Point(154, 268);
+            this.btnRapportValidés.Location = new System.Drawing.Point(177, 183);
             this.btnRapportValidés.Name = "btnRapportValidés";
             this.btnRapportValidés.Size = new System.Drawing.Size(200, 23);
             this.btnRapportValidés.TabIndex = 7;
             this.btnRapportValidés.Text = "Consulter Rapport validés";
             this.btnRapportValidés.UseVisualStyleBackColor = true;
+            this.btnRapportValidés.Visible = false;
             this.btnRapportValidés.Click += new System.EventHandler(this.btnRapportValidés_Click);
             // 
             // label2
@@ -88,7 +89,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(444, 9);
+            this.label3.Location = new System.Drawing.Point(480, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 5;
@@ -96,18 +97,19 @@
             // 
             // btnmModifierRapport
             // 
-            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 234);
+            this.btnmModifierRapport.Location = new System.Drawing.Point(177, 332);
             this.btnmModifierRapport.Name = "btnmModifierRapport";
             this.btnmModifierRapport.Size = new System.Drawing.Size(200, 23);
             this.btnmModifierRapport.TabIndex = 0;
             this.btnmModifierRapport.Text = "Modifier rapport visite";
+            this.btnmModifierRapport.Visible = false;
             this.btnmModifierRapport.Click += new System.EventHandler(this.btnmModifierRapport_Click);
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(154, 367);
+            this.btnQuitter.Location = new System.Drawing.Point(445, 446);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(200, 23);
+            this.btnQuitter.Size = new System.Drawing.Size(111, 23);
             this.btnQuitter.TabIndex = 6;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
@@ -115,7 +117,7 @@
             // 
             // btn_modifierMDP
             // 
-            this.btn_modifierMDP.Location = new System.Drawing.Point(154, 164);
+            this.btn_modifierMDP.Location = new System.Drawing.Point(177, 446);
             this.btn_modifierMDP.Name = "btn_modifierMDP";
             this.btn_modifierMDP.Size = new System.Drawing.Size(200, 23);
             this.btn_modifierMDP.TabIndex = 7;
@@ -125,7 +127,7 @@
             // 
             // btn_consult_praticien
             // 
-            this.btn_consult_praticien.Location = new System.Drawing.Point(154, 106);
+            this.btn_consult_praticien.Location = new System.Drawing.Point(177, 125);
             this.btn_consult_praticien.Name = "btn_consult_praticien";
             this.btn_consult_praticien.Size = new System.Drawing.Size(200, 23);
             this.btn_consult_praticien.TabIndex = 8;
@@ -135,7 +137,7 @@
             // 
             // btn_consulter_medicament
             // 
-            this.btn_consulter_medicament.Location = new System.Drawing.Point(154, 135);
+            this.btn_consulter_medicament.Location = new System.Drawing.Point(177, 154);
             this.btn_consulter_medicament.Name = "btn_consulter_medicament";
             this.btn_consulter_medicament.Size = new System.Drawing.Size(200, 23);
             this.btn_consulter_medicament.TabIndex = 9;
@@ -145,7 +147,7 @@
             // 
             // btnModifierInfoPerso
             // 
-            this.btnModifierInfoPerso.Location = new System.Drawing.Point(154, 344);
+            this.btnModifierInfoPerso.Location = new System.Drawing.Point(177, 361);
             this.btnModifierInfoPerso.Name = "btnModifierInfoPerso";
             this.btnModifierInfoPerso.Size = new System.Drawing.Size(200, 23);
             this.btnModifierInfoPerso.TabIndex = 10;
@@ -155,29 +157,31 @@
             // 
             // btnNouveauRapportRegion
             // 
-            this.btnNouveauRapportRegion.Location = new System.Drawing.Point(154, 385);
+            this.btnNouveauRapportRegion.Location = new System.Drawing.Point(177, 241);
             this.btnNouveauRapportRegion.Name = "btnNouveauRapportRegion";
             this.btnNouveauRapportRegion.Size = new System.Drawing.Size(200, 23);
             this.btnNouveauRapportRegion.TabIndex = 11;
             this.btnNouveauRapportRegion.Text = "Consulter Nouveau rapport Region";
             this.btnNouveauRapportRegion.UseVisualStyleBackColor = true;
+            this.btnNouveauRapportRegion.Visible = false;
             this.btnNouveauRapportRegion.Click += new System.EventHandler(this.btnNouveauRapportRegion_Click);
             // 
             // btn_promotion
             // 
-            this.btn_promotion.Location = new System.Drawing.Point(154, 292);
+            this.btn_promotion.Location = new System.Drawing.Point(177, 390);
             this.btn_promotion.Name = "btn_promotion";
             this.btn_promotion.Size = new System.Drawing.Size(200, 22);
             this.btn_promotion.TabIndex = 10;
             this.btn_promotion.Text = "Promouvoir un visiteur";
             this.btn_promotion.UseVisualStyleBackColor = true;
+            this.btn_promotion.Visible = false;
             this.btn_promotion.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_deconnexion
             // 
-            this.btn_deconnexion.Location = new System.Drawing.Point(154, 320);
+            this.btn_deconnexion.Location = new System.Drawing.Point(12, 446);
             this.btn_deconnexion.Name = "btn_deconnexion";
-            this.btn_deconnexion.Size = new System.Drawing.Size(200, 18);
+            this.btn_deconnexion.Size = new System.Drawing.Size(111, 23);
             this.btn_deconnexion.TabIndex = 12;
             this.btn_deconnexion.Text = "Se deconnecter";
             this.btn_deconnexion.UseVisualStyleBackColor = true;
@@ -185,18 +189,19 @@
             // 
             // btnVoirVisiteurEquipe
             // 
-            this.btnVoirVisiteurEquipe.Location = new System.Drawing.Point(154, 297);
+            this.btnVoirVisiteurEquipe.Location = new System.Drawing.Point(177, 212);
             this.btnVoirVisiteurEquipe.Name = "btnVoirVisiteurEquipe";
             this.btnVoirVisiteurEquipe.Size = new System.Drawing.Size(200, 23);
             this.btnVoirVisiteurEquipe.TabIndex = 10;
             this.btnVoirVisiteurEquipe.Text = "Consulter Visiteur de son équipe";
+            this.btnVoirVisiteurEquipe.Visible = false;
             this.btnVoirVisiteurEquipe.Click += new System.EventHandler(this.btnVoirVisiteurEquipe_Click);
             // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 411);
+            this.ClientSize = new System.Drawing.Size(568, 499);
             this.Controls.Add(this.btn_deconnexion);
             this.Controls.Add(this.btnNouveauRapportRegion);
             this.Controls.Add(this.btnModifierInfoPerso);
