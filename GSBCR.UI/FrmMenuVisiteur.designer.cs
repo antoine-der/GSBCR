@@ -38,6 +38,10 @@
             this.btn_modifierMDP = new System.Windows.Forms.Button();
             this.btn_consult_praticien = new System.Windows.Forms.Button();
             this.btn_consulter_medicament = new System.Windows.Forms.Button();
+            this.btnModifierInfoPerso = new System.Windows.Forms.Button();
+            this.btnNouveauRapportRegion = new System.Windows.Forms.Button();
+            this.btn_promotion = new System.Windows.Forms.Button();
+            this.btn_deconnexion = new System.Windows.Forms.Button();
             this.btnVoirVisiteurEquipe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,7 +57,7 @@
             // 
             // btnNouveau
             // 
-            this.btnNouveau.Location = new System.Drawing.Point(154, 101);
+            this.btnNouveau.Location = new System.Drawing.Point(154, 205);
             this.btnNouveau.Name = "btnNouveau";
             this.btnNouveau.Size = new System.Drawing.Size(200, 23);
             this.btnNouveau.TabIndex = 2;
@@ -92,7 +96,7 @@
             // 
             // btnmModifierRapport
             // 
-            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 126);
+            this.btnmModifierRapport.Location = new System.Drawing.Point(154, 234);
             this.btnmModifierRapport.Name = "btnmModifierRapport";
             this.btnmModifierRapport.Size = new System.Drawing.Size(200, 23);
             this.btnmModifierRapport.TabIndex = 0;
@@ -101,7 +105,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(315, 376);
+            this.btnQuitter.Location = new System.Drawing.Point(154, 367);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(200, 23);
             this.btnQuitter.TabIndex = 6;
@@ -111,7 +115,7 @@
             // 
             // btn_modifierMDP
             // 
-            this.btn_modifierMDP.Location = new System.Drawing.Point(12, 376);
+            this.btn_modifierMDP.Location = new System.Drawing.Point(154, 164);
             this.btn_modifierMDP.Name = "btn_modifierMDP";
             this.btn_modifierMDP.Size = new System.Drawing.Size(200, 23);
             this.btn_modifierMDP.TabIndex = 7;
@@ -121,7 +125,7 @@
             // 
             // btn_consult_praticien
             // 
-            this.btn_consult_praticien.Location = new System.Drawing.Point(154, 210);
+            this.btn_consult_praticien.Location = new System.Drawing.Point(154, 106);
             this.btn_consult_praticien.Name = "btn_consult_praticien";
             this.btn_consult_praticien.Size = new System.Drawing.Size(200, 23);
             this.btn_consult_praticien.TabIndex = 8;
@@ -131,13 +135,53 @@
             // 
             // btn_consulter_medicament
             // 
-            this.btn_consulter_medicament.Location = new System.Drawing.Point(154, 239);
+            this.btn_consulter_medicament.Location = new System.Drawing.Point(154, 135);
             this.btn_consulter_medicament.Name = "btn_consulter_medicament";
             this.btn_consulter_medicament.Size = new System.Drawing.Size(200, 23);
             this.btn_consulter_medicament.TabIndex = 9;
             this.btn_consulter_medicament.Text = "Consulter médicament";
             this.btn_consulter_medicament.UseVisualStyleBackColor = true;
             this.btn_consulter_medicament.Click += new System.EventHandler(this.btn_consulter_medicament_Click);
+            // 
+            // btnModifierInfoPerso
+            // 
+            this.btnModifierInfoPerso.Location = new System.Drawing.Point(154, 344);
+            this.btnModifierInfoPerso.Name = "btnModifierInfoPerso";
+            this.btnModifierInfoPerso.Size = new System.Drawing.Size(200, 23);
+            this.btnModifierInfoPerso.TabIndex = 10;
+            this.btnModifierInfoPerso.Text = "Modifier Informations persosonelles";
+            this.btnModifierInfoPerso.UseVisualStyleBackColor = true;
+            this.btnModifierInfoPerso.Click += new System.EventHandler(this.btnModifierInfoPerso_Click);
+            // 
+            // btnNouveauRapportRegion
+            // 
+            this.btnNouveauRapportRegion.Location = new System.Drawing.Point(154, 385);
+            this.btnNouveauRapportRegion.Name = "btnNouveauRapportRegion";
+            this.btnNouveauRapportRegion.Size = new System.Drawing.Size(200, 23);
+            this.btnNouveauRapportRegion.TabIndex = 11;
+            this.btnNouveauRapportRegion.Text = "Consulter Nouveau rapport Region";
+            this.btnNouveauRapportRegion.UseVisualStyleBackColor = true;
+            this.btnNouveauRapportRegion.Click += new System.EventHandler(this.btnNouveauRapportRegion_Click);
+            // 
+            // btn_promotion
+            // 
+            this.btn_promotion.Location = new System.Drawing.Point(154, 292);
+            this.btn_promotion.Name = "btn_promotion";
+            this.btn_promotion.Size = new System.Drawing.Size(200, 22);
+            this.btn_promotion.TabIndex = 10;
+            this.btn_promotion.Text = "Promouvoir un visiteur";
+            this.btn_promotion.UseVisualStyleBackColor = true;
+            this.btn_promotion.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_deconnexion
+            // 
+            this.btn_deconnexion.Location = new System.Drawing.Point(154, 320);
+            this.btn_deconnexion.Name = "btn_deconnexion";
+            this.btn_deconnexion.Size = new System.Drawing.Size(200, 18);
+            this.btn_deconnexion.TabIndex = 12;
+            this.btn_deconnexion.Text = "Se deconnecter";
+            this.btn_deconnexion.UseVisualStyleBackColor = true;
+            this.btn_deconnexion.Click += new System.EventHandler(this.btn_deconnexion_Click);
             // 
             // btnVoirVisiteurEquipe
             // 
@@ -153,6 +197,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 411);
+            this.Controls.Add(this.btn_deconnexion);
+            this.Controls.Add(this.btnNouveauRapportRegion);
+            this.Controls.Add(this.btnModifierInfoPerso);
+            this.Controls.Add(this.btn_promotion);
             this.Controls.Add(this.btnVoirVisiteurEquipe);
             this.Controls.Add(this.btnmModifierRapport);
             this.Controls.Add(this.btn_consulter_medicament);
@@ -184,6 +232,10 @@
         private System.Windows.Forms.Button btn_modifierMDP;
         private System.Windows.Forms.Button btn_consult_praticien;
         private System.Windows.Forms.Button btn_consulter_medicament;
+        private System.Windows.Forms.Button btnModifierInfoPerso;
+        private System.Windows.Forms.Button btnNouveauRapportRegion;
+        private System.Windows.Forms.Button btn_promotion;
+        private System.Windows.Forms.Button btn_deconnexion;
         private System.Windows.Forms.Button btnVoirVisiteurEquipe;
     }
 }

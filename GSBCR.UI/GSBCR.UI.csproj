@@ -58,9 +58,6 @@
     <Reference Include="EntityFramework">
       <HintPath>F:\BTS\Seconde année\PPE3-R\GSBCR\Nouveau dossier (2)\GSBCR.BLL\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="GSBCR.modele">
-      <HintPath>..\GSBCR.modele\obj\Debug\GSBCR.modele.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -103,6 +100,24 @@
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModifierInfoPerso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifierInfoPerso.Designer.cs">
+      <DependentUpon>FrmModifierInfoPerso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNouveauRapportVisitesParRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNouveauRapportVisitesParRegion.Designer.cs">
+      <DependentUpon>FrmNouveauRapportVisitesParRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPromouvoirVisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPromouvoirVisiteur.Designer.cs">
+      <DependentUpon>FrmPromouvoirVisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRapportsValides.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +158,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifierInfoPerso.resx">
+      <DependentUpon>FrmModifierInfoPerso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNouveauRapportVisitesParRegion.resx">
+      <DependentUpon>FrmNouveauRapportVisitesParRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPromouvoirVisiteur.resx">
+      <DependentUpon>FrmPromouvoirVisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRapportsValides.resx">
       <DependentUpon>FrmRapportsValides.cs</DependentUpon>
@@ -208,6 +232,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
+      <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
+      <Name>GSBCR.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
       <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
       <Name>GSBCR.BLL</Name>
