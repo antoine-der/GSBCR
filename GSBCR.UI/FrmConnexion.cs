@@ -14,7 +14,7 @@ namespace GSBCR.UI
 {
     public partial class FrmConnexion : Form
     {
-        private VISITEUR vis;
+        VISITEUR vis = new VISITEUR();
         public FrmConnexion()
         {
             InitializeComponent();
@@ -35,19 +35,25 @@ namespace GSBCR.UI
         {
             string mat = txt_mat.Text;
             string mdp = txt_mdp.Text;
-            vis = Manager.ChargerVisiteur(mat, mdp);
-            //if (string.IsNullOrWhiteSpace(txt_mat.Text) && string.IsNullOrWhiteSpace(txt_mdp.Text))
-            if (txt_mat.Text == null || txt_mat.Text == "" && txt_mdp.Text == null || txt_mdp.Text == "")
+            try
             {
-                MessageBox.Show("Les identifiants sont nulls ou incorrectes");
+                vis = Manager.ChargerVisiteur(mat, mdp);
+                if (mat == "" || mdp == "" || mat != vis.VIS_MATRICULE || mdp != vis.vis_mdp)
+                {
+                    MessageBox.Show("Les identifiants ne sont pas tous remplis.");
+                }
+                else
+                {
+                    this.Visible = false;
+                    FrmMenuVisiteur fmv = new FrmMenuVisiteur(mat, mdp);
+                    fmv.ShowDialog();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.Visible = false;
-                FrmMenuVisiteur fmv = new FrmMenuVisiteur(mat, mdp);
-                fmv.ShowDialog();
-
+                MessageBox.Show("Les identifiants sont incorrectes");
             }
+            
 
         }
 

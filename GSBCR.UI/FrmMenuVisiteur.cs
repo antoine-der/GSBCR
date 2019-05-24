@@ -142,7 +142,9 @@ namespace GSBCR.UI
 
         private void btnNouveauRapportRegion_Click(object sender, EventArgs e)
         {
-            FrmNouveauRapportVisitesParRegion f = new FrmNouveauRapportVisitesParRegion();
+            VAFFECTATION vaff = new VAFFECTATION();
+            vaff = leProfil;
+            FrmNouveauRapportVisitesParRegion f = new FrmNouveauRapportVisitesParRegion(vaff);
             f.ShowDialog();
         }
 

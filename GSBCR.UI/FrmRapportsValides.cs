@@ -15,7 +15,6 @@ namespace GSBCR.UI
 {
     public partial class FrmRapportsValides : Form
     {
-        RAPPORT_VISITE r;
         public FrmRapportsValides(VISITEUR v)
         {
             InitializeComponent();
