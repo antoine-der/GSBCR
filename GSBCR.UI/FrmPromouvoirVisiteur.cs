@@ -14,9 +14,7 @@ namespace GSBCR.UI
 {
     public partial class FrmPromouvoirVisiteur : Form
     {
-        //NOTE : NON FONCTIONNEL --> LA LISTE DE VISITEURS NE CHARGE PAS
-
-        //Indique le matricule du visiteur selectionné
+        // Charge les visiteurs avec leurs affectations
         string leMatricule = "";
         private List<string> lesNumVis;
         private List<string> lesNumDel;
@@ -60,7 +58,7 @@ namespace GSBCR.UI
                 btn_promotion.Enabled = false;
             }
         }
-
+        // Bouton permettant de promouvoir un visiteur sélectionner délégué
         private void btn_promotion_Click(object sender, EventArgs e)
         {            
             string m = this.ListMatricule[listBox_matriculeVis.SelectedIndex];
@@ -74,12 +72,12 @@ namespace GSBCR.UI
             MessageBox.Show("Le visiteur a bien été promu");
             this.Close();
         }
-
+        // Bouton permettant la fermeture du formulaire
         private void btn_fermer_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        // affiche les visiteurs dans la listbox
         private void listBox_matriculeVis_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Indique l'index du visiteur selectionné

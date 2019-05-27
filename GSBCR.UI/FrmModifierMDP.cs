@@ -15,12 +15,13 @@ namespace GSBCR.UI
     public partial class FrmModifierMDP : Form
     {
         private VISITEUR v;
+        // Charge le visiteur
         public FrmModifierMDP(VISITEUR v)
         {
             InitializeComponent();
             this.v = v;
         }
-
+        // Valide la modification du mot de passe si toute les conditions sont respectés
         private void btn_valider_Click(object sender, EventArgs e)
         {
             

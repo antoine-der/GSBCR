@@ -17,6 +17,9 @@ namespace GSBCR.UI
         private List<string> lesNumRapport;
         private List<string> lesNumMatricule;
         private List<string> lesNumMatriculeAvecRapport;
+        /* Si le visiteur est délégué, charger les visiteurs de la région
+         * Si le visiteur est responsable, charger les visiteurs du secteur
+        */ 
         public FrmVoirVisiteurEquipe(VISITEUR v)
         {
             InitializeComponent();
@@ -52,7 +55,10 @@ namespace GSBCR.UI
             cbxMatricule.DataSource = bsVisiteur;
             cbxMatricule.DisplayMember = "VIS_NOM";
         }
-
+        /* Liste déroulante pour afficher la liste des visiteurs
+           Afficher les différents éléments
+           Charger les rapports
+        */
         private void cbxMatricule_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxMatricule.SelectedIndex != -1)
@@ -105,7 +111,7 @@ namespace GSBCR.UI
                 }
             }
         }
-
+        // Rendre non visible les éléments au chargements du formulaire
         private void FrmVoirVisiteurEquipe_Load(object sender, EventArgs e)
         {
 
@@ -122,12 +128,12 @@ namespace GSBCR.UI
             labeldtAffectation.Visible = false;
             labelNbRapports.Visible = false;
         }
-
+        // Fermer le menu
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        // Bouton pour afficher le détail d'un rapport
         private void btnRapportsConsultés_Click(object sender, EventArgs e)
         {
             FrmDetailRapportVisite f = new FrmDetailRapportVisite(this.lesNumMatricule[cbxMatricule.SelectedIndex], Int32.Parse(this.lesNumRapport[lbxRapports.SelectedIndex]));

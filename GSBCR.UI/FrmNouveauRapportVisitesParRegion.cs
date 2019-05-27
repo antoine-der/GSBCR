@@ -15,6 +15,7 @@ namespace GSBCR.UI
     public partial class FrmNouveauRapportVisitesParRegion : Form
     {
         //private List<RAPPORT_VISITE> lesRapports = Manager.ChargerRapportRegionNonLus();
+        // Charge  les rappors de la région non lus
         public FrmNouveauRapportVisitesParRegion(VAFFECTATION v)
         {
             InitializeComponent();
@@ -24,12 +25,12 @@ namespace GSBCR.UI
             cbxRapport.DisplayMember = "RAP_NUM";
             btnVoirLePraticien.Enabled = true;
         }
-
+        // Bouton pour fermer le formulaire
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        // Affiche le rapport si un rapport est sélectionner
         private void cbxRapport_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxRapport.SelectedIndex != -1)
@@ -44,13 +45,13 @@ namespace GSBCR.UI
                 btnVoirLePraticien.Enabled = false;
             }
         }
-
+        // N'affiche pas les users controls au chargement du formulaire
         private void FrmNouveauRapportVisitesParRegion_Load(object sender, EventArgs e)
         {
             ucRapportsValides1.Visible = false;
             ucPraticien1.Visible = false;
         }
-
+        // Bouton permettant l'affichage du praticien
         private void btnVoirLePraticien_Click(object sender, EventArgs e)
         {
             Int16 mat = Int16.Parse(ucRapportsValides1.txtNumPrat.Text.ToString());

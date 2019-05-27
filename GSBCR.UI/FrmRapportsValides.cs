@@ -15,6 +15,7 @@ namespace GSBCR.UI
 {
     public partial class FrmRapportsValides : Form
     {
+        // Charge les rapports finis des visiteurs
         public FrmRapportsValides(VISITEUR v)
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace GSBCR.UI
             cbxRapport.DisplayMember = "RAP_NUM";
                        
         }
-
+        // affiche les rapports finis des visiteurs, affiche les users controls si un rapport est sélectionner
         private void cbxRapport_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -43,14 +44,14 @@ namespace GSBCR.UI
             }
 
         }
-        
+        // N'affiche pas les user control au chargement du formulaire
         private void FrmRapportsValides_Load(object sender, EventArgs e)
         {
             ucRapportsValides1.Visible = false;
             ucPraticien1.Visible = false;
             
         }
-
+        // Charge le praticien
         private void btnVoirLePraticien_Click(object sender, EventArgs e)
         {
             Int16 mat = Int16.Parse(ucRapportsValides1.txtNumPrat.Text.ToString());

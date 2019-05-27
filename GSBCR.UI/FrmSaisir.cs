@@ -138,7 +138,7 @@ namespace GSBCR.UI
                 
             }
         }
-
+        // Validation du formulaire
         private void btnValider_Click(object sender, EventArgs e)
         {
             bool ajout;
@@ -194,7 +194,7 @@ namespace GSBCR.UI
             }
             btnValider.Enabled = true;
         }
-
+        // liste déroulantes des praticiens visités
         private void cbxNomPraticien_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxNomPraticien.SelectedIndex != -1)
@@ -204,7 +204,7 @@ namespace GSBCR.UI
 
             btnVoirPatricien.Enabled = true;
         }
-
+        // liste déroulante des différents motifs
         private void cbxMotif_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxMotif.SelectedIndex != -1)
@@ -217,13 +217,13 @@ namespace GSBCR.UI
         {
 
         }
-
+        // Bouton quitter le formulaire
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
         }
-
+        // Liste déroulante charge la liste des médicaments
         private void cbxMed1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxMed1.SelectedIndex != -1)
@@ -238,7 +238,7 @@ namespace GSBCR.UI
             }
                 
         }
-
+        // Liste déroulante charge la liste des médicaments
         private void cbxMed2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxMed2.SelectedIndex != -1)
@@ -258,13 +258,13 @@ namespace GSBCR.UI
             // Initialisation des contrôles du formulaire avec les valeurs du rapport de visite 
             
         }
-
+        // voir les détails du médicament
         private void btnVoirmed1_Click(object sender, EventArgs e)
         {
             FrmDetailsMedicament f = new FrmDetailsMedicament(txtMed1.Text);
             f.ShowDialog();
         }
-
+        // voir les détails du médicament
         private void btnVoirMed2_Click(object sender, EventArgs e)
         {
             FrmDetailsMedicament f = new FrmDetailsMedicament(txtMed2.Text);
@@ -291,7 +291,7 @@ namespace GSBCR.UI
         private void txtNum_TextChanged(object sender, EventArgs e)
         {         
         }
-
+        // Checkbox pour la saisie définitive
         private void chbDefinitif_CheckedChanged_1(object sender, EventArgs e)
         {
             string phrase = "";
@@ -338,7 +338,7 @@ namespace GSBCR.UI
                 }
             }     
        }
-
+        // Affiche les détails du praticien
         private void btnVoirPatricien_Click(object sender, EventArgs e)
         {
             FrmDetailsPraticien f = new FrmDetailsPraticien(short.Parse(txtNumPraticien.Text));
