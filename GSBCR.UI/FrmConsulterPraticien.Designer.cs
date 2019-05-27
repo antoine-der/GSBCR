@@ -35,7 +35,6 @@
             this.cbxPra1 = new System.Windows.Forms.ComboBox();
             this.bsPra1 = new System.Windows.Forms.BindingSource(this.components);
             this.bsRapport1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_choisir_praticien = new System.Windows.Forms.Button();
             this.checkBox_afficher_rapport = new System.Windows.Forms.CheckBox();
             this.listBox_numRapport = new System.Windows.Forms.ListBox();
             this.btn_choisirRapport = new System.Windows.Forms.Button();
@@ -71,17 +70,7 @@
             this.cbxPra1.Name = "cbxPra1";
             this.cbxPra1.Size = new System.Drawing.Size(135, 21);
             this.cbxPra1.TabIndex = 2;
-            // 
-            // btn_choisir_praticien
-            // 
-            this.btn_choisir_praticien.BackColor = System.Drawing.Color.Transparent;
-            this.btn_choisir_praticien.Location = new System.Drawing.Point(643, 47);
-            this.btn_choisir_praticien.Name = "btn_choisir_praticien";
-            this.btn_choisir_praticien.Size = new System.Drawing.Size(96, 23);
-            this.btn_choisir_praticien.TabIndex = 3;
-            this.btn_choisir_praticien.Text = "Valider";
-            this.btn_choisir_praticien.UseVisualStyleBackColor = false;
-            this.btn_choisir_praticien.Click += new System.EventHandler(this.btn_choisir_praticien_Click);
+            this.cbxPra1.SelectedIndexChanged += new System.EventHandler(this.cbxPra1_SelectedIndexChanged);
             // 
             // checkBox_afficher_rapport
             // 
@@ -144,7 +133,6 @@
             this.Controls.Add(this.btn_choisirRapport);
             this.Controls.Add(this.listBox_numRapport);
             this.Controls.Add(this.checkBox_afficher_rapport);
-            this.Controls.Add(this.btn_choisir_praticien);
             this.Controls.Add(this.cbxPra1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -165,7 +153,6 @@
         private System.Windows.Forms.ComboBox cbxPra1;
         private System.Windows.Forms.BindingSource bsPra1;
         private System.Windows.Forms.BindingSource bsRapport1;
-        private System.Windows.Forms.Button btn_choisir_praticien;
         private System.Windows.Forms.CheckBox checkBox_afficher_rapport;
         private System.Windows.Forms.ListBox listBox_numRapport;
         private System.Windows.Forms.Button btn_choisirRapport;

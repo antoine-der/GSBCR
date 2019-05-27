@@ -12,8 +12,10 @@ using GSBCR.modele;
 
 namespace GSBCR.UI
 {
+    //FORMULAIRE AFFICHANT LES DETAILS D'UN MEDICAMENT
     public partial class FrmDetailsMedicament : Form
     {
+        //Le formulaire prend en paramètre le depot legal du medicament dont il est question
         public FrmDetailsMedicament(string depotLegal)
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace GSBCR.UI
             ucMedicament1.LeMedicament = med;
         }
 
+        //Click sur le bouton "Quitter" : ferme le formulaire
         private void btn_quitter_Click(object sender, EventArgs e)
         {
             this.Close();

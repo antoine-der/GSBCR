@@ -12,8 +12,10 @@ using GSBCR.modele;
 
 namespace GSBCR.UI
 {
+    //FORMULAIRE DE CONNEXION
     public partial class FrmConnexion : Form
     {
+        //Instantiation du visiteur
         VISITEUR vis = new VISITEUR();
         public FrmConnexion()
         {
@@ -31,6 +33,7 @@ namespace GSBCR.UI
 
         }
 
+        //Click sur le bouton valider
         private void btn_valider_Click(object sender, EventArgs e)
         {
             string mat = txt_mat.Text;
@@ -38,10 +41,12 @@ namespace GSBCR.UI
             try
             {
                 vis = Manager.ChargerVisiteur(mat, mdp);
+                //Si le mot de passe et / ou le matricule ne sont pas renseignés
                 if (mat == "" || mdp == "" || mat != vis.VIS_MATRICULE || mdp != vis.vis_mdp)
                 {
                     MessageBox.Show("Les identifiants ne sont pas tous remplis.");
                 }
+                //Sinon
                 else
                 {
                     this.Visible = false;
@@ -49,6 +54,7 @@ namespace GSBCR.UI
                     fmv.ShowDialog();
                 }
             }
+            //Si les identifiants sont incorrectes
             catch (Exception ex)
             {
                 MessageBox.Show("Les identifiants sont incorrectes");
@@ -57,6 +63,7 @@ namespace GSBCR.UI
 
         }
 
+        //Click sur le bouton "Quitter", permet de fermer l'application
         private void btn_quitter_Click(object sender, EventArgs e)
         {
             this.Close();

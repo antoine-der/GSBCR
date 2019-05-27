@@ -11,6 +11,7 @@ using GSBCR.BLL;
 
 namespace GSBCR.UI
 {
+    //FORMULAIRE AFFICHANT LES CHOIX POSSIBLES (LES CHOIX DIFFERENT SELON LES RÔLES)
     public partial class FrmMenuVisiteur : Form
     {
         private VISITEUR leVisiteur;
@@ -18,13 +19,8 @@ namespace GSBCR.UI
         public FrmMenuVisiteur(string mat, string mdp)
         {
             InitializeComponent();
-            //le visiteur doit être passé en paramètre par le menu de connexion
-            //Ici initialiser le visiteur en dur
-            //visiteur
+            //Le visiteur est passé en paramètre par le menu de connexion
             leVisiteur = Manager.ChargerVisiteur(mat, mdp);
-            
-            //délégue
-            //leVisiteur = Manager.ChargerVisiteur("r58", "0CC56730");
             try
             {
                 leProfil = Manager.ChargerAffectationVisiteur(leVisiteur.VIS_MATRICULE);
@@ -36,10 +32,12 @@ namespace GSBCR.UI
             
         }
 
+        //Fonction qui permet d'afficher les options disponibles selon le rôle de l'utilisateur
         private void FrmMenuVisiteur_Load(object sender, EventArgs e)
         {
             label2.Text = leProfil.TRA_ROLE + " " + leVisiteur.Vis_PRENOM + " " + leVisiteur.VIS_NOM;
             label3.Text = "Region : " + leProfil.REG_CODE;
+            //S'il s'agit d'un visiteur
             if (leProfil.TRA_ROLE == "Visiteur")
             {
                 btn_consult_praticien.Visible = true;
@@ -50,6 +48,7 @@ namespace GSBCR.UI
                 btnmModifierRapport.Visible = true;
                 btnRapportValidés.Visible = true;
             }
+            //Sinon s'il s'agit d'un délégué
             else if (leProfil.TRA_ROLE == "Délégué")
             {
                 btn_consult_praticien.Visible = true;
@@ -62,6 +61,7 @@ namespace GSBCR.UI
                 btnNouveauRapportRegion.Visible = true;
                 btnVoirVisiteurEquipe.Visible = true;
             }
+            //Sinon s'il s'agit d'un responsable
             else if (leProfil.TRA_ROLE == "Responsable")
             {
                 btn_consult_praticien.Visible = true;
@@ -74,6 +74,7 @@ namespace GSBCR.UI
             
         }
 
+        //Click sur le bouton "Nouveau rapport de visite" : ouvre le formulaire de création d'un nouveau rapport de visite
         private void btnNouveau_Click(object sender, EventArgs e)
         {
             RAPPORT_VISITE r = new RAPPORT_VISITE();
@@ -82,18 +83,21 @@ namespace GSBCR.UI
             f.ShowDialog();
         }
 
+        //Click sur le bouton "Quitter" : ferme le formulaire et quitte l'application
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
         }
 
+        //Click sur le bouton "Modifier Mot de passe" : ouvre le formulaire de modification du mot de passe
         private void btn_modifierMDP_Click(object sender, EventArgs e)
         {
             FrmModifierMDP fmdp = new FrmModifierMDP(leVisiteur);
             fmdp.ShowDialog();
         }
 
+        //Click sur le bouton "Consulter Rapports validés" : ouvre le formulaire de consultation des rapports à l'état validé
         private void btnRapportValidés_Click(object sender, EventArgs e)
         {
             VISITEUR v = new VISITEUR();
@@ -102,6 +106,7 @@ namespace GSBCR.UI
             frv.ShowDialog();
         }
 
+        //Click sur le bouton "Consulter médicament" : ouvre le formulaire de consultation d'un médicament
         private void btn_consulter_medicament_Click(object sender, EventArgs e)
         {
             VISITEUR v = new VISITEUR();
@@ -110,6 +115,7 @@ namespace GSBCR.UI
             fcm.ShowDialog();
         }
 
+        //Click sur le bouton "Consulter praticien" : ouvre le formulaire de consultation d'un praticien
         private void btn_consult_praticien_Click(object sender, EventArgs e)
         {
             VISITEUR v = new VISITEUR();
@@ -118,6 +124,7 @@ namespace GSBCR.UI
             fcp.ShowDialog();
         }
 
+        //Click sur le bouton "Modifier rapport visite" : ouvre le formulaire de modification d'un rapport de visite
         private void btnmModifierRapport_Click(object sender, EventArgs e)
         {
             RAPPORT_VISITE r = new RAPPORT_VISITE();
@@ -126,13 +133,14 @@ namespace GSBCR.UI
             f.ShowDialog();
         }
 
-        //Promouvoir un visiteur
+        ////Click sur le bouton "Promouvoir un visiteur" : ouvre le formulaire de promotion d'un visiteur
         private void button1_Click(object sender, EventArgs e)
         {
             FrmPromouvoirVisiteur f = new FrmPromouvoirVisiteur(leProfil.VIS_MATRICULE);
             f.ShowDialog();
         }
 
+        //Click sur le bouton "Modifier Informations personnelles" : ouvre le formulaire de modifications des informations personnelles
         private void btnModifierInfoPerso_Click(object sender, EventArgs e)
         {
             
@@ -140,6 +148,7 @@ namespace GSBCR.UI
             f.ShowDialog();
         }
 
+        //Click sur le bouton "Consulter Nouveau rapport Region" : ouvre le formulaire de consultation des nouveaux rapports de la région de l'utilisateur
         private void btnNouveauRapportRegion_Click(object sender, EventArgs e)
         {
             VAFFECTATION vaff = new VAFFECTATION();
@@ -148,16 +157,13 @@ namespace GSBCR.UI
             f.ShowDialog();
         }
 
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }*/
-
+        //Click sur le bouton "Se déconnecter" : deconnecte l'utilisateur et redémarre l'application (renvoi au formulaire de connexion)
         private void btn_deconnexion_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }
 
+        //Click sur le bouton "Consulter Visiteur de son équipe" : ouvre le formulaire de consultations des visiteurs de l'équipe de l'utilisateur connecté
         private void btnVoirVisiteurEquipe_Click(object sender, EventArgs e)
         {
             VISITEUR v = new VISITEUR();

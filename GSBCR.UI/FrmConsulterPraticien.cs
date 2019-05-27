@@ -12,9 +12,11 @@ using GSBCR.modele;
 
 namespace GSBCR.UI
 {
+    //FORMULAIRE DE CONSULTATION DES PRATICIENS
     public partial class FrmConsulterPraticien : Form
     {
         private string idVisiteur;
+        //Constructeur : cacher certains elements lors de l'initialisation, definir les sources des données
         public FrmConsulterPraticien(VISITEUR idV)
         {
             this.idVisiteur = idV.VIS_MATRICULE;
@@ -28,7 +30,46 @@ namespace GSBCR.UI
             cbxPra1.SelectedIndex = -1;
         }
 
-        private void btn_choisir_praticien_Click(object sender, EventArgs e)
+        //Click sur le bouton "Quitter" : ferme le formulaire
+        private void btn_quitter_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //Click sur le bouton "Sélectionner" : permet d'afficher les informations d'un rapport où le praticien sélectionné est mentionné
+        private void btn_choisirRapport_Click(object sender, EventArgs e)
+        {
+            int noRapport = Int32.Parse(listBox_numRapport.SelectedItem.ToString());
+            FrmDetailRapportVisite formulaire = new FrmDetailRapportVisite(this.idVisiteur, noRapport);
+            formulaire.ShowDialog();
+        }
+
+        //Fonction qui va cacher certains élements lors du chargement du formulaire (appelée dans le constructeur)
+        private void hideElements()
+        {
+            ucPraticien1.Visible = false;
+            listBox_numRapport.Visible = false;
+            checkBox_afficher_rapport.Visible = false;
+            btn_choisirRapport.Visible = false;
+        }
+
+        //Lorsque l'on coche ou non la checkbox "Afficher rapport de visite" : affiche ou non les rapports concernés par le praticien sélectionné
+        private void checkBox_afficher_rapport_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_afficher_rapport.Checked)
+            {
+                listBox_numRapport.Visible = true;
+                btn_choisirRapport.Visible = true;
+            }
+            else
+            {
+                listBox_numRapport.Visible = false;
+                btn_choisirRapport.Visible = false;
+            }
+        }
+
+        //Lorsque l'index de la checkbox change : met à jour les informations de ucPraticien1
+        private void cbxPra1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxPra1.SelectedIndex != -1)
             {
@@ -54,41 +95,6 @@ namespace GSBCR.UI
                 }
 
                 bsRapport1.DataSource = lesNumRap;
-            }
-        }
-
-        private void btn_quitter_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btn_choisirRapport_Click(object sender, EventArgs e)
-        {
-            int noRapport = Int32.Parse(listBox_numRapport.SelectedItem.ToString());
-            FrmDetailRapportVisite formulaire = new FrmDetailRapportVisite(this.idVisiteur, noRapport);
-            formulaire.ShowDialog();
-        }
-
-        //Fonction qui va cacher certains élements lors du chargement du formulaire
-        private void hideElements()
-        {
-            ucPraticien1.Visible = false;
-            listBox_numRapport.Visible = false;
-            checkBox_afficher_rapport.Visible = false;
-            btn_choisirRapport.Visible = false;
-        }
-
-        private void checkBox_afficher_rapport_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_afficher_rapport.Checked)
-            {
-                listBox_numRapport.Visible = true;
-                btn_choisirRapport.Visible = true;
-            }
-            else
-            {
-                listBox_numRapport.Visible = false;
-                btn_choisirRapport.Visible = false;
             }
         }
     }

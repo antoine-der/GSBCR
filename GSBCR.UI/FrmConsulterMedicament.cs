@@ -12,9 +12,11 @@ using GSBCR.modele;
 
 namespace GSBCR.UI
 {    
+    //FORMULAIRE DE CONSULTATION DES MEDICAMENTS
     public partial class FrmConsulterMedicament : Form
     {
         private string idVisiteur;
+        //Constructeur : cacher certains elements lors de l'initialisation, definir les sources des données
         public FrmConsulterMedicament(VISITEUR idV)
         {
             this.idVisiteur = idV.VIS_MATRICULE;
@@ -28,6 +30,7 @@ namespace GSBCR.UI
             cbxMed1.SelectedIndex = -1;
         }
 
+        //Click sur le bouton "Sélectionner" : permet d'afficher les informations d'un rapport où le médicament sélectionné est mentionné
         private void btn_choisirRapport_Click(object sender, EventArgs e)
         {
             int noRapport = Int32.Parse(listBox_numRapport.SelectedItem.ToString());
@@ -35,12 +38,38 @@ namespace GSBCR.UI
             formulaire.ShowDialog();
         }
 
+        //Click sur le bouton "Quitter" : ferme le formulaire
         private void btn_quitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btn_choisir_medicament_Click(object sender, EventArgs e)
+        //Fonction qui va cacher certains élements lors du chargement du formulaire
+        private void hideElements()
+        {
+            ucMedicament1.Visible = false;
+            listBox_numRapport.Visible = false;
+            checkBox_afficher_rapport.Visible = false;
+            btn_choisirRapport.Visible = false;
+        }
+
+        //Lorsque l'on coche ou non la checkbox "Afficher rapport de visite" : affiche ou non les rapports concernés par le medicament sélectionné
+        private void checkBox_afficher_rapport_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_afficher_rapport.Checked)
+            {
+                listBox_numRapport.Visible = true;
+                btn_choisirRapport.Visible = true;
+            }
+            else
+            {
+                listBox_numRapport.Visible = false;
+                btn_choisirRapport.Visible = false;
+            }
+        }
+
+        //Lorsque l'index de la checkbox change : met à jour les informations de ucMedicament1
+        private void cbxMed1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxMed1.SelectedIndex != -1)
             {
@@ -68,30 +97,5 @@ namespace GSBCR.UI
                 bsRapport1.DataSource = lesNumRap;
             }
         }
-
-        //Fonction qui va cacher certains élements lors du chargement du formulaire
-        private void hideElements()
-        {
-            ucMedicament1.Visible = false;
-            listBox_numRapport.Visible = false;
-            checkBox_afficher_rapport.Visible = false;
-            btn_choisirRapport.Visible = false;
-        }
-
-        private void checkBox_afficher_rapport_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_afficher_rapport.Checked)
-            {
-                listBox_numRapport.Visible = true;
-                btn_choisirRapport.Visible = true;
-            }
-            else
-            {
-                listBox_numRapport.Visible = false;
-                btn_choisirRapport.Visible = false;
-            }
-        }
-
-
     }
 }

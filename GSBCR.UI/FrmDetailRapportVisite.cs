@@ -12,6 +12,7 @@ using GSBCR.modele;
 
 namespace GSBCR.UI
 {
+    //FORMULAIRE AFFICHANT LES DETAILS D'UN RAPPORT DE VISITE
     public partial class FrmDetailRapportVisite : Form
     {
         //Le formulaire prend en paramètre le matricule du visiteur (m) ainsi que le numero du rapport (n)
@@ -34,6 +35,7 @@ namespace GSBCR.UI
 
         }
 
+        //Click sur le bouton "Quitter" : ferme le formulaire
         private void btn_quitter_Click(object sender, EventArgs e)
         {
             this.Close();
