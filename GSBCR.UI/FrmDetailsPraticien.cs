@@ -12,8 +12,10 @@ using GSBCR.BLL;
 
 namespace GSBCR.UI
 {
+    //FORMULAIRE AFFICHANT LES DETAILS D'UN PRATICIEN
     public partial class FrmDetailsPraticien : Form
     {
+        //Le formulaire prend en paramètre le numéro du praticien dont il est question
         public FrmDetailsPraticien(short praNum)
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace GSBCR.UI
             ucPraticien1.LePraticien = pra;
         }
 
+        //Click sur le bouton "Quitter" : ferme le formulaire
         private void btn_quitter_Click(object sender, EventArgs e)
         {
             this.Close();

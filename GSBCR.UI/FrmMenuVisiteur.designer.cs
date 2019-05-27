@@ -72,7 +72,7 @@
             this.btnRapportValidés.Name = "btnRapportValidés";
             this.btnRapportValidés.Size = new System.Drawing.Size(200, 23);
             this.btnRapportValidés.TabIndex = 7;
-            this.btnRapportValidés.Text = "Consulter Rapport validés";
+            this.btnRapportValidés.Text = "Consulter Rapports validés";
             this.btnRapportValidés.UseVisualStyleBackColor = true;
             this.btnRapportValidés.Visible = false;
             this.btnRapportValidés.Click += new System.EventHandler(this.btnRapportValidés_Click);
@@ -151,7 +151,7 @@
             this.btnModifierInfoPerso.Name = "btnModifierInfoPerso";
             this.btnModifierInfoPerso.Size = new System.Drawing.Size(200, 23);
             this.btnModifierInfoPerso.TabIndex = 10;
-            this.btnModifierInfoPerso.Text = "Modifier Informations persosonelles";
+            this.btnModifierInfoPerso.Text = "Modifier Informations personnelles";
             this.btnModifierInfoPerso.UseVisualStyleBackColor = true;
             this.btnModifierInfoPerso.Click += new System.EventHandler(this.btnModifierInfoPerso_Click);
             // 
@@ -183,7 +183,7 @@
             this.btn_deconnexion.Name = "btn_deconnexion";
             this.btn_deconnexion.Size = new System.Drawing.Size(111, 23);
             this.btn_deconnexion.TabIndex = 12;
-            this.btn_deconnexion.Text = "Se deconnecter";
+            this.btn_deconnexion.Text = "Se déconnecter";
             this.btn_deconnexion.UseVisualStyleBackColor = true;
             this.btn_deconnexion.Click += new System.EventHandler(this.btn_deconnexion_Click);
             // 

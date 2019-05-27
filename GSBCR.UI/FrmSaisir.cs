@@ -278,8 +278,7 @@ namespace GSBCR.UI
             this.cnt = lr.Count;
             if (cbxLesRapports.SelectedIndex != -1)
             {
-                txtNum.Text = cbxLesRapports.SelectedValue.ToString();               
-                
+                txtNum.Text = cbxLesRapports.SelectedValue.ToString();          
             }
             else { 
                 txtNum.Text = String.Empty;

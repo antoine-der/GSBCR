@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulterMedicament));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_choisir_medicament = new System.Windows.Forms.Button();
             this.ucMedicament1 = new GSBCR.UC.UcMedicament();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxMed1 = new System.Windows.Forms.ComboBox();
@@ -54,17 +53,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(183, 121);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_choisir_medicament
-            // 
-            this.btn_choisir_medicament.BackColor = System.Drawing.Color.Transparent;
-            this.btn_choisir_medicament.Location = new System.Drawing.Point(662, 50);
-            this.btn_choisir_medicament.Name = "btn_choisir_medicament";
-            this.btn_choisir_medicament.Size = new System.Drawing.Size(75, 23);
-            this.btn_choisir_medicament.TabIndex = 1;
-            this.btn_choisir_medicament.Text = "Valider";
-            this.btn_choisir_medicament.UseVisualStyleBackColor = false;
-            this.btn_choisir_medicament.Click += new System.EventHandler(this.btn_choisir_medicament_Click);
             // 
             // ucMedicament1
             // 
@@ -90,6 +78,7 @@
             this.cbxMed1.Name = "cbxMed1";
             this.cbxMed1.Size = new System.Drawing.Size(164, 21);
             this.cbxMed1.TabIndex = 4;
+            this.cbxMed1.SelectedIndexChanged += new System.EventHandler(this.cbxMed1_SelectedIndexChanged);
             // 
             // checkBox_afficher_rapport
             // 
@@ -146,7 +135,6 @@
             this.Controls.Add(this.cbxMed1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucMedicament1);
-            this.Controls.Add(this.btn_choisir_medicament);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmConsulterMedicament";
             this.Text = "FrmConsulterMedicament";
@@ -161,7 +149,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_choisir_medicament;
         private UC.UcMedicament ucMedicament1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxMed1;

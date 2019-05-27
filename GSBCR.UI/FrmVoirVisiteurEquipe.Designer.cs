@@ -171,7 +171,7 @@
             this.btnRapportsConsultés.Name = "btnRapportsConsultés";
             this.btnRapportsConsultés.Size = new System.Drawing.Size(107, 23);
             this.btnRapportsConsultés.TabIndex = 50;
-            this.btnRapportsConsultés.Text = "Consultés rapports";
+            this.btnRapportsConsultés.Text = "Consulter rapports";
             this.btnRapportsConsultés.UseVisualStyleBackColor = true;
             this.btnRapportsConsultés.Click += new System.EventHandler(this.btnRapportsConsultés_Click);
             // 
